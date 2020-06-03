@@ -89,7 +89,8 @@ beta_star = 0.0
 wec_factor = 1.0
 wakedeficitmodel = ff.GaussYawVariableSpread(alpha_star, beta_star, k1, k2, wec_factor)
 local_ti_model = ff.LocalTIModelMaxTI(alpha_star, beta_star, k1, k2)
-wakedeflectionmodel = ff.JiminezYawDeflection(0.022)
+# wakedeflectionmodel = ff.JiminezYawDeflection(0.022)
+wakedeflectionmodel = ff.NoYawDeflection()
 
 model_set = ff.WindFarmModelSet(wakedeficitmodel,wakedeflectionmodel,wakecombinationmodel,local_ti_model)
 
