@@ -54,7 +54,7 @@ speeds = range(3.,stop=25.,length=23)
 omegas = [6.972,7.183,7.506,7.942,8.469,9.156,10.296,11.431,11.89,
                     12.1,12.1,12.1,12.1,12.1,12.1,12.1,12.1,12.1,12.1,12.1,
                     12.1,12.1,12.1]
-pitches = 1.0.*[0.,0.,0.,0.,0.,0.,0.,0.,0.,3.823,6.602,8.668,10.45,12.055,
+pitches = [0.,0.,0.,0.,0.,0.,0.,0.,0.,3.823,6.602,8.668,10.45,12.055,
                         13.536,14.92,16.226,17.473,18.699,19.941,21.177,22.347,
                         23.469]
 
@@ -67,6 +67,7 @@ air_density = 1.225  # kg/m^3
 
 
 nturbines = 2
+turbine_x = zeros(nturbines)
 turbine_y = zeros(nturbines)
 turbine_z = zeros(nturbines)
 turbine_yaw = zeros(nturbines)
@@ -85,7 +86,6 @@ ai = 1.0/3.0
 turbine_ct = zeros(nturbines) .+ ct
 turbine_ai = zeros(nturbines) .+ ai
 winddirections = [270.0*pi/180.0]
-wind_speed = 11.
 ambient_ti = ones(length(winddirections)) .* 0.046
 # ambient_ti = ones(length(winddirections)) .* 0.08
 windspeeds = [wind_speed]
@@ -108,7 +108,8 @@ for i = 1:nturbines
     ct_model[i] = ct_model1
 end
 # ct_model = ff.ThrustModelConstantCt(ct)
-power_model = ff.PowerModelConstantCp(cp)
+# power_model = ff.PowerModelConstantCp(cp)
+power_model = ff.PowerModelPowerCurveCubic()
 wind_shear_model = ff.PowerLawWindShear(shearexponent)
 
 sorted_turbine_index = [i for i  in 1:nturbines]
@@ -128,6 +129,7 @@ wakecombinationmodel = ff.LinearLocalVelocitySuperposition()
 # k2 = 0.003678
 # alpha_star = 2.32
 # beta_star = 0.154
+
 k1 = 0.406188555910869
 k2 = 0.0
 alpha_star = 8.059490825809203
@@ -135,6 +137,7 @@ beta_star = 0.0
 wec_factor = 1.0
 wakedeficitmodel = ff.GaussYawVariableSpread(alpha_star, beta_star, k1, k2, wec_factor)
 local_ti_model = ff.LocalTIModelMaxTI(alpha_star, beta_star, k1, k2)
-wakedeflectionmodel = ff.JiminezYawDeflection(0.022)
+# wakedeflectionmodel = ff.JiminezYawDeflection(0.022)
+wakedeflectionmodel = ff.NoYawDeflection()
 
 model_set = ff.WindFarmModelSet(wakedeficitmodel,wakedeflectionmodel,wakecombinationmodel,local_ti_model)

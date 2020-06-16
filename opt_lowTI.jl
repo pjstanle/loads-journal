@@ -113,7 +113,7 @@ AEP3 = 0.0
 AEP4 = 0.0
 AEP5 = 0.0
 
-filenum = 39
+filenum = 1
 for k = 1:1000
     global filenum
     global AEP1
@@ -188,15 +188,15 @@ end
 
 
 
-# bx = boundary_vertices[:,1]
-# by = boundary_vertices[:,2]
-# append!(bx,bx[1])
-# append!(by,by[1])
-# # plot(bx,by,color="black")
-#
-# # for i = 1:length(turbine_x)
-# #     plt.gcf().gca().add_artist(plt.Circle((turbine_x[i],turbine_y[i]), rotor_diameter[i]/2.0, fill=false,color="C1"))
-# # end
+bx = boundary_vertices[:,1]
+by = boundary_vertices[:,2]
+append!(bx,bx[1])
+append!(by,by[1])
+plot(bx,by,color="black")
+
+for i = 1:length(turbine_x)
+    plt.gcf().gca().add_artist(plt.Circle((turbine_x[i],turbine_y[i]), rotor_diameter[i]/2.0, fill=false,color="C1"))
+end
 
 
 
