@@ -50,11 +50,12 @@ pitch = 0.
 Rhub = 1.5
 hubHt = 90.
 
-speeds = range(3.,stop=25.,length=23)
-omegas = [6.972,7.183,7.506,7.942,8.469,9.156,10.296,11.431,11.89,
+speeds = [3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,11.4,12.0,13.0,14.0,15.0,
+                    16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0]
+omegas = [6.972,7.183,7.506,7.942,8.469,9.156,10.296,11.431,11.89,12.1,
                     12.1,12.1,12.1,12.1,12.1,12.1,12.1,12.1,12.1,12.1,12.1,
                     12.1,12.1,12.1]
-pitches = [0.,0.,0.,0.,0.,0.,0.,0.,0.,3.823,6.602,8.668,10.45,12.055,
+pitches = [0.,0.,0.,0.,0.,0.,0.,0.,0.,0.0,3.823,6.602,8.668,10.45,12.055,
                         13.536,14.92,16.226,17.473,18.699,19.941,21.177,22.347,
                         23.469]
 
@@ -86,8 +87,8 @@ ai = 1.0/3.0
 turbine_ct = zeros(nturbines) .+ ct
 turbine_ai = zeros(nturbines) .+ ai
 winddirections = [270.0*pi/180.0]
-# ambient_ti = ones(length(winddirections)) .* 0.046
-ambient_ti = ones(length(winddirections)) .* 0.08
+ambient_ti = ones(length(winddirections)) .* 0.046
+# ambient_ti = ones(length(winddirections)) .* 0.08
 windspeeds = [wind_speed]
 windprobabilities = [1.0]
 measurementheight = [hub_height[1]]

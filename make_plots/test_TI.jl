@@ -729,7 +729,7 @@ sep = sep_arr[k]
 end
 
 subplots_adjust(top=0.91,bottom=0.18,left=0.11,right=0.99,wspace=0.05)
-savefig("turbulence_profiles.pdf",transparent=true)
+# savefig("turbulence_profiles.pdf",transparent=true)
 
 
 
