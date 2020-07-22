@@ -2,7 +2,9 @@ using FlowFarm
 using PyPlot
 const ff = FlowFarm
 include("../model.jl")
-
+ambient_ti = [0.046]
+windspeeds = [11.0]
+windresource = ff.DiscretizedWindResource(winddirections, windspeeds, windprobabilities, measurementheight, air_density, ambient_ti, wind_shear_model)
 sep_arr = [4.0,7.0,10.0]
 
 figure(1,figsize=[6.0,2.5])
@@ -23,7 +25,7 @@ sep = sep_arr[k]
                # loc = [x_vec[i],0.0,z]
                # loc = [4.0*rotor_diameter,0.0,z_vec[i]]
                # TI[i] = FlowFarm.GaussianTI_stanley(loc,windfarm,windfarmstate,ambient_ti[1])
-               TI[i] = ff.GaussianTI(loc,turbine_x, turbine_y, rotor_diameter, hub_height, turbine_ct, sorted_turbine_index, ambient_ti[1]; div_sigma=2.5, div_ti=1.2)
+               TI[i] = ff.GaussianTI(loc,turbine_x, turbine_y, rotor_diameter, hub_height, turbine_ct, sorted_turbine_index, ambient_ti[1]; div_sigma=2.5, div_ti=2.2)
     end
 
     # plot((x_vec.-turbine_x[1])./rotor_diameter,TI.-ambient_ti)

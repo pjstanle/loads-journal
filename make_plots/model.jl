@@ -1,7 +1,7 @@
 # using FlowFarm
 # using CCBlade
 # using PyPlot
-# using FLOWMath
+using FLOWMath
 # using Statistics
 using DelimitedFiles
 
@@ -50,12 +50,18 @@ pitch = 0.
 Rhub = 1.5
 hubHt = 90.
 
-speeds = [3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,11.4,12.0,13.0,14.0,15.0,
-                    16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0]
+# speeds = [3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,11.4,12.0,13.0,14.0,15.0,
+#                     16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0]
 omegas = [6.972,7.183,7.506,7.942,8.469,9.156,10.296,11.431,11.89,12.1,
                     12.1,12.1,12.1,12.1,12.1,12.1,12.1,12.1,12.1,12.1,12.1,
                     12.1,12.1,12.1]
-pitches = [0.,0.,0.,0.,0.,0.,0.,0.,0.,0.0,3.823,6.602,8.668,10.45,12.055,
+# pitches = [0.,0.,0.,0.,0.,0.,0.,0.,0.,0.0,3.823,6.602,8.668,10.45,12.055,
+#                         13.536,14.92,16.226,17.473,18.699,19.941,21.177,22.347,
+#                         23.469]
+speeds = [3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,10.5,11.0,11.4,12.0,13.0,14.0,15.0,
+                    16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0]
+
+pitches = [0.,0.,0.,0.,0.,0.,0.,0.,0.1,0.5,1.0,3.823,6.602,8.668,10.45,12.055,
                         13.536,14.92,16.226,17.473,18.699,19.941,21.177,22.347,
                         23.469]
 
@@ -89,6 +95,7 @@ turbine_ai = zeros(nturbines) .+ ai
 winddirections = [270.0*pi/180.0]
 ambient_ti = ones(length(winddirections)) .* 0.046
 # ambient_ti = ones(length(winddirections)) .* 0.08
+# wind_speed = 10.0
 windspeeds = [wind_speed]
 windprobabilities = [1.0]
 measurementheight = [hub_height[1]]
@@ -143,5 +150,8 @@ wakedeflectionmodel = ff.NoYawDeflection()
 
 model_set = ff.WindFarmModelSet(wakedeficitmodel,wakedeflectionmodel,wakecombinationmodel,local_ti_model)
 
-omega_func = Akima(speeds, omegas)
+# omega_func = Akima(speeds, omegas)
 pitch_func = Akima(speeds, pitches)
+
+turbine_ct = ones(nturbines) .* ff.calculate_ct(10.0,ct_model[1])
+# println(turbine_ct)

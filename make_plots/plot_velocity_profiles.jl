@@ -15,7 +15,7 @@ for k = 1:length(sep_arr)
     U_model = zeros(L)
     for i = 1:L
         loc = [sep*rotor_diameter[1],sweep[i]*rotor_diameter[1],hub_height[1]]
-        U_model[i] = ff.point_velocity(loc, turbine_x, turbine_y, turbine_z, turbine_yaw, turbine_ct, turbine_ai,
+        U_model[i] = ff.point_velocity(loc[1],loc[2],loc[3], turbine_x, turbine_y, turbine_z, turbine_yaw, turbine_ct, turbine_ai,
                             rotor_diameter, hub_height, ambient_ti[1], sorted_turbine_index, wind_speed,
                             windresource, model_set)
     end
@@ -117,4 +117,4 @@ for k = 1:length(sep_arr)
 end
 
 subplots_adjust(top=0.91,bottom=0.13,left=0.11,right=0.99,wspace=0.05)
-savefig("velocity_profiles.pdf",transparent=true)
+# savefig("velocity_profiles.pdf",transparent=true)

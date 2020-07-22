@@ -281,7 +281,13 @@ for i = 1:nturbines
     ct_model[i] = ct_model1
 end
 
-power_model = ff.PowerModelPowerCurveCubic()
+# power_model = ff.PowerModelPowerCurveCubic()
+
+power_model1 = ff.PowerModelPowerCurveCubic()
+power_model = Vector{typeof(power_model1)}(undef, nturbines)
+for i = 1:nturbines
+    power_model[i] = power_model1
+end
 
 # Wind Resource
 # Horns rev wind farm
