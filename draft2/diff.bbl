@@ -1,0 +1,213 @@
+\begin{thebibliography}{10}
+
+\bibitem{wiser2016reducing}
+Ryan Wiser, Maureen Hand, Joachim Seel, and Bentham Paulos.
+\newblock Reducing wind energy costs through increased turbine size: is the sky
+  the limit.
+\newblock {\em Rev. Berkeley National Laboratory Electricity Markets and Policy
+  Group}, 2016.
+
+\bibitem{enevoldsen2019examining}
+Peter Enevoldsen and George Xydis.
+\newblock Examining the trends of 35 years growth of key wind turbine
+  components.
+\newblock {\em Energy for sustainable development}, 50:18--26, 2019.
+
+\bibitem{hubler2019validation}
+Clemens H{\"u}bler, Wout Weijtjens, Cristian~G Gebhardt, Raimund Rolfes, and
+  Christof Devriendt.
+\newblock Validation of improved sampling concepts for offshore wind turbine
+  fatigue design.
+\newblock {\em Energies}, 12(4):603, 2019.
+
+\bibitem{hu2016reliability}
+Weifei Hu, KK~Choi, and Hyunkyoo Cho.
+\newblock Reliability-based design optimization of wind turbine blades for
+  fatigue life under dynamic wind load uncertainty.
+\newblock {\em Structural and Multidisciplinary Optimization}, 54(4):953--970,
+  2016.
+
+\bibitem{ziegler2018lifetime}
+Lisa Ziegler, Elena Gonzalez, Tim Rubert, Ursula Smolka, and Julio~J Melero.
+\newblock Lifetime extension of onshore wind turbines: A review covering
+  germany, spain, denmark, and the uk.
+\newblock {\em Renewable and Sustainable Energy Reviews}, 82:1261--1271, 2018.
+
+\bibitem{thomsen1999fatigue}
+Kenneth Thomsen and Poul S{\o}rensen.
+\newblock Fatigue loads for wind turbines operating in wakes.
+\newblock {\em Journal of Wind Engineering and Industrial Aerodynamics},
+  80(1-2):121--136, 1999.
+
+\bibitem{meng2019study}
+Hang Meng, Fue-Sang Lien, Gregory Glinka, Li~Li, and Jinhua Zhang.
+\newblock Study on wake-induced fatigue on wind turbine blade based on elastic
+  actuator line model and two-dimensional finite element model.
+\newblock {\em Wind Engineering}, 43(1):64--82, 2019.
+
+\bibitem{kim2015study}
+Soo-Hyun Kim, Hyung-Ki Shin, Young-Chul Joo, and Keon-Hoon Kim.
+\newblock A study of the wake effects on the wind characteristics and fatigue
+  loads for the turbines in a wind farm.
+\newblock {\em Renewable Energy}, 74:536--543, 2015.
+
+\bibitem{bossanyi2003individual}
+Ervin~A Bossanyi.
+\newblock Individual blade pitch control for load reduction.
+\newblock {\em Wind Energy: An International Journal for Progress and
+  Applications in Wind Power Conversion Technology}, 6(2):119--128, 2003.
+
+\bibitem{njiri2019consideration}
+Jackson~G Njiri, Nejra Beganovic, Manh~H Do, and Dirk S{\"o}ffker.
+\newblock Consideration of lifetime and fatigue load in wind turbine control.
+\newblock {\em Renewable Energy}, 131:818--828, 2019.
+
+\bibitem{bernhammer2016fatigue}
+Lars~O Bernhammer, Gijs~AM van Kuik, and Roeland De~Breuker.
+\newblock Fatigue and extreme load reduction of wind turbine components using
+  smart rotors.
+\newblock {\em Journal of Wind Engineering and Industrial Aerodynamics},
+  154:84--95, 2016.
+
+\bibitem{jonkman2009definition}
+Jason Jonkman, Sandy Butterfield, Walter Musial, and George Scott.
+\newblock Definition of a 5-mw reference wind turbine for offshore system
+  development.
+\newblock Technical report, National Renewable Energy Lab. (NREL), Golden, CO
+  (United States), 2009.
+
+\bibitem{churchfield2012nwtc}
+M~Churchfield and S~Lee.
+\newblock Wind turbine modeling and simulation-{SOWFA}.
+\newblock 2012.
+\newblock URL: \url{https://www.nrel.gov/wind/modeling-simulation.html}.
+
+\bibitem{openfast_docs}
+{National Renewable Energy Laboratory}.
+\newblock Openfast documentation.
+\newblock 2017.
+\newblock URL:
+  \url{https://openfast.readthedocs.io/en/master/source/this_doc.html}.
+
+\bibitem{jonkman2006turbsim}
+Bonnie~J Jonkman and Marshall~L Buhl~Jr.
+\newblock Turbsim user's guide.
+\newblock Technical report, National Renewable Energy Lab.(NREL), Golden, CO
+  (United States), 2006.
+
+\bibitem{Ning2020}
+Andrew Ning.
+\newblock Using blade element momentum methods with gradient-based design
+  optimization.
+\newblock April 2020.
+\newblock (in review).
+
+\bibitem{bastankhah2016experimental}
+Majid Bastankhah and Fernando Port{\'e}-Agel.
+\newblock Experimental and theoretical study of wind turbine wakes in yawed
+  conditions.
+\newblock {\em Journal of Fluid Mechanics}, 806:506--541, 2016.
+
+\bibitem{Thomas2018}
+Jared~J. Thomas and Andrew Ning.
+\newblock A method for reducing multi-modality in the wind farm layout
+  optimization problem.
+\newblock In {\em Journal of Physics: Conference Series}, volume 1037, Milano,
+  Italy, June 2018. The Science of Making Torque from Wind.
+
+\bibitem{Thomas2019}
+Jared~J. Thomas, Jennifer Annoni, Paul Fleming, and Andrew Ning.
+\newblock Comparison of wind farm layout optimization results using a simple
+  wake model and gradient-based optimization to large-eddy simulations.
+\newblock In {\em AIAA Scitech 2019 Forum}, San Diego, CA, January 2019.
+
+\bibitem{niayifar2016analytical}
+Amin Niayifar and Fernando Port{\'e}-Agel.
+\newblock Analytical modeling of wind farms: A new approach for power
+  prediction.
+\newblock {\em Energies}, 9(9):741, 2016.
+
+\bibitem{ishihara2018new}
+Takeshi Ishihara and Guo-Wei Qian.
+\newblock A new gaussian-based analytical wake model for wind turbines
+  considering ambient turbulence intensities and thrust coefficient effects.
+\newblock {\em Journal of Wind Engineering and Industrial Aerodynamics},
+  177:275--292, 2018.
+
+\bibitem{resor2013definition}
+Brian~R Resor.
+\newblock Definition of a 5mw/61.5 m wind turbine blade reference model.
+\newblock {\em Albuquerque, New Mexico, USA, Sandia National Laboratories,
+  SAND2013-2569}, 2013, 2013.
+
+\bibitem{budynas2020shigley}
+Richard~G Budynas and J~Keith Nisbett.
+\newblock {\em Shigley's mechanical engineering design}.
+\newblock McGraw-Hill Education, 2020.
+
+\bibitem{matsuishi1968fatigue}
+Masanori Matsuishi and Tatsuo Endo.
+\newblock Fatigue of metals subjected to varying stress.
+\newblock {\em Japan Society of Mechanical Engineers, Fukuoka, Japan},
+  68(2):37--40, 1968.
+
+\bibitem{mandell2003new}
+John~F Mandell, Daniel~D Samborsky, Lei Wang, and Neil~K Wahl.
+\newblock New fatigue data for wind turbine blade materials.
+\newblock In {\em ASME 2003 Wind Energy Symposium}, pages 167--179. American
+  Society of Mechanical Engineers, 2003.
+
+\bibitem{hayman2012mlife}
+G~Hayman.
+\newblock Mlife theory manual for version 1.00.
+\newblock {\em National Renewable Energy Laboratory, Golden, CO}, 74(75):106,
+  2012.
+
+\bibitem{Ingersoll2018}
+Bryce Ingersoll and Andrew Ning.
+\newblock Efficient incorporation of fatigue damage constraints in wind turbine
+  blade optimization.
+\newblock {\em Wind Energy}, August 2018.
+\newblock (in review).
+
+\bibitem{gill2005snopt}
+Philip~E Gill, Walter Murray, and Michael~A Saunders.
+\newblock Snopt: An {SQP} algorithm for large-scale constrained optimization.
+\newblock {\em SIAM review}, 47(1):99--131, 2005.
+
+\bibitem{revels2016forward}
+Jarrett Revels, Miles Lubin, and Theodore Papamarkou.
+\newblock Forward-mode automatic differentiation in {J}ulia.
+\newblock {\em arXiv preprint arXiv:1607.07892}, 2016.
+
+\bibitem{stanley2020wind}
+Andrew~PJ Stanley, Jennifer King, and Andrew Ning.
+\newblock Wind farm layout optimization with loads considerations.
+\newblock In {\em Journal of Physics: Conference Series}, volume 1452, page
+  012072, 2020.
+
+\bibitem{fleming2013sowfa}
+Paul Fleming, Pieter Gebraad, Jan-Willem van Wingerden, Sang Lee, Matt
+  Churchfield, Andrew Scholbrock, John Michalakes, Kathryn Johnson, and Pat
+  Moriarty.
+\newblock Sowfa super-controller: A high-fidelity tool for evaluating wind
+  plant control approaches.
+\newblock Technical report, National Renewable Energy Lab.(NREL), Golden, CO
+  (United States), 2013.
+
+\bibitem{fleming2015simulation}
+Paul Fleming, Pieter~MO Gebraad, Sang Lee, Jan-Willem van Wingerden, Kathryn
+  Johnson, Matt Churchfield, John Michalakes, Philippe Spalart, and Patrick
+  Moriarty.
+\newblock Simulation comparison of wake mitigation control strategies for a
+  two-turbine case.
+\newblock {\em Wind Energy}, 18(12):2135--2143, 2015.
+
+\bibitem{gebraad2016wind}
+Pieter~MO Gebraad, FW~Teeuwisse, JW~Van~Wingerden, Paul~A Fleming, SD~Ruben,
+  JR~Marden, and LY~Pao.
+\newblock Wind plant power optimization through yaw control using a parametric
+  model for wake effects—a cfd simulation study.
+\newblock {\em Wind Energy}, 19(1):95--114, 2016.
+
+\end{thebibliography}

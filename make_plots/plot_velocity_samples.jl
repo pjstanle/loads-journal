@@ -36,7 +36,7 @@ L = 100
 sweep = range(-1.5,stop=1.5,length=L)
 
 sep = 4.0
-ws = 12.0
+ws = 10.0
 
 include("model.jl")
 windspeeds = [ws]
@@ -46,7 +46,6 @@ wakedeficitmodel = ff.GaussYawVariableSpread(alpha_star, beta_star, k1, k2, wec_
 local_ti_model = ff.LocalTIModelMaxTI(alpha_star, beta_star, k1, k2)
 model_set = ff.WindFarmModelSet(wakedeficitmodel,wakedeflectionmodel,wakecombinationmodel,local_ti_model)
 
-TI = "low"
 ambient_ti = [0.046]
 
 U_model = zeros(L)
@@ -68,7 +67,7 @@ end
 
 
 
-U_model100 = zeros(L)
+U_model_true = zeros(L)
 rotor_points_y,rotor_points_z = sunflower_points(10000)
 for i = 1:L
             turbine_y = [0.0,sweep[i]*rotor_diameter[1]]

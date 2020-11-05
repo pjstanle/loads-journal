@@ -61,6 +61,6 @@ wakedeflectionmodel = ff.JiminezYawDeflection(0.022)
 model_set = ff.WindFarmModelSet(wakedeficitmodel,wakedeflectionmodel,wakecombinationmodel,local_ti_model)
 
 turbine_inflow_velcities = [windspeeds[1]]
-# turbine_ct = ff.calculate_ct(turbine_inflow_velcities[1],ct_model[1])
-turbine_ct = ff.calculate_ct(10.0,ct_model[1])
+turbine_ct = ff.calculate_ct(turbine_inflow_velcities[1],ct_model[1])
+# turbine_ct = ff.calculate_ct(10.0,ct_model[1])
 sorted_turbine_index = [1]

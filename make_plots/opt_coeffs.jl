@@ -49,7 +49,11 @@ function vel_wrapper(x)
             index += 1
         end
     end
-    return [sum((vel_points .- data_array) .^2)]./1.0
+
+    diff_in = maximum(data_array) .- data_array
+    diff_out = vel_points[1] .- vel_points
+    # return [sum((vel_points .- data_array) .^2)]./1.0
+    return [sum((diff_in .- diff_out) .^2)]
 end
 
 
@@ -86,10 +90,11 @@ global sweep
 global data_array
 
 
-wind_speed = 12.0
-TI = "high"
-
-ambient_ti = [0.08]
+wind_speed = 13.0
+# TI = "high"
+# ambient_ti = [0.08]
+TI = "low"
+ambient_ti = [0.046]
 
 
 include("vel_data.jl")

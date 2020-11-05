@@ -1,6 +1,8 @@
 using PyPlot
 include("vel_data.jl")
 include("coeffs_data.jl")
+using CCBlade
+using FlowFarm
 L = 100
 sweep = range(-1.5,stop=1.5,length=L)
 
@@ -225,4 +227,4 @@ end
 
 # suptitle("high turbulence intensity: 8%",fontsize=10)
 subplots_adjust(top=0.91,bottom=0.1,left=0.15,right=0.99,wspace=0.1,hspace=0.1)
-savefig("vels_all.pdf",transparent=true)
+# savefig("vels_all.pdf",transparent=true)

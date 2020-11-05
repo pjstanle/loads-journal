@@ -1,5 +1,7 @@
 const ff=FlowFarm
 
+
+println("ambient_ti in: ", ambient_ti)
 diam = 126.4
 nturbines = 1
 turbine_x = [0.0]

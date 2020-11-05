@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: draft1.aux
+The style file: unsrt.bst
+Database file #1: references.bib
+Warning--empty journal in churchfield2012nwtc
+Warning--empty journal in openfast_docs
+Warning--empty journal in Ning2020
+You've used 32 entries,
+            1791 wiz_defined-function locations,
+            636 strings with 9873 characters,
+and the built_in function-call counts, 7210 in all, are:
+= -- 634
+> -- 375
+< -- 4
++ -- 137
+- -- 105
+* -- 504
+:= -- 1200
+add.period$ -- 102
+call.type$ -- 32
+change.case$ -- 34
+chr.to.int$ -- 0
+cite$ -- 35
+duplicate$ -- 308
+empty$ -- 663
+format.name$ -- 105
+if$ -- 1563
+int.to.chr$ -- 0
+int.to.str$ -- 32
+missing$ -- 30
+newline$ -- 167
+num.names$ -- 32
+pop$ -- 75
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 126
+stack$ -- 0
+substring$ -- 428
+swap$ -- 52
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 3
+while$ -- 69
+width$ -- 34
+write$ -- 356
+(There were 3 warnings)

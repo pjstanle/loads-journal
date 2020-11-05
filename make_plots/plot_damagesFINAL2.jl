@@ -2,8 +2,9 @@ using PyPlot
 using FlowFarm
 using CCBlade
 using Statistics
-include("coeffs_data.jl")
-include("TIcoeffs_data.jl")
+include("coeffs_data_vct.jl")
+include("TIcoeffs_data_vct.jl")
+# include("TIcoeffs_data.jl")
 # include("FAST_data_NEW.jl")
 include("FAST_data_low.jl")
 include("model.jl")
@@ -247,6 +248,7 @@ sweep = range(-1.5,stop=1.5,length=L)
 
 sep_arr = [4.0,7.0,10.0]
 ws_arr = [10.0,11.0,12.0,13.0]
+# ws_arr = [13.0]
 
 TI = "low"
 ambient_ti = [0.046]
@@ -265,7 +267,7 @@ for k = 1:length(sep_arr)
         windspeeds = [ws]
         windresource = ff.DiscretizedWindResource(winddirections, windspeeds, windprobabilities, measurementheight, air_density, ambient_ti, wind_shear_model)
 
-        alpha_star,beta_star,k1,k2 = get_coeffs(ws,"low")
+        alpha_star,beta_star,k1,k2 = get_coeffs(ws,TI)
         wakedeficitmodel = ff.GaussYawVariableSpread(alpha_star, beta_star, k1, k2, wec_factor)
         local_ti_model = ff.LocalTIModelMaxTI(alpha_star, beta_star, k1, k2)
         model_set = ff.WindFarmModelSet(wakedeficitmodel,wakedeflectionmodel,wakecombinationmodel,local_ti_model)
@@ -279,8 +281,8 @@ for k = 1:length(sep_arr)
             turbine_velocities, turbine_ct, turbine_ai, turbine_local_ti = ff.turbine_velocities_one_direction(turbine_x, turbine_y, turbine_z, rotor_diameter, hub_height, turbine_yaw,
             sorted_turbine_index, ct_model, rotor_points_y, rotor_points_z, windresource,
             model_set; wind_farm_state_id=1)
-
-            turbine_ct = zeros(nturbines) .+ 0.7620929940139257
+            # println("turbine_ct: ", turbine_ct)
+            # turbine_ct = zeros(nturbines) .+ 0.7620929940139257
 
             damage_model[i] = ff.get_single_damage_FINAL(turbine_x,turbine_y,turbine_z,rotor_diameter,hub_height,turbine_yaw,turbine_ai,sorted_turbine_index,turbine_ID,state_ID,nCycles,az_arr,
                                 turb_samples,pitch_func,ff.GaussianTI,r,sections,Rhub,Rtip,precone,tilt,windresource,model_set,
@@ -451,13 +453,14 @@ for k = 1:length(sep_arr)
         #         ylim(0.0,3)
         #         yticks([1.0,2.0,3.0])
         # else
-                ylim(0.0,0.5)
-                # yticks([0.5,1.0,1.5,2.0])
+                ylim(0.0,0.3)
+                yticks([0.05,0.1,0.15,0.2,0.25])
         # end
         end
 end
 
 
 suptitle("low turbulence intensity: 4.6%",fontsize=10)
+# suptitle("high turbulence intensity: 8%",fontsize=10)
 subplots_adjust(top=0.91,bottom=0.1,left=0.13,right=0.99,wspace=0.1,hspace=0.1)
-# savefig("damage_lowTI_low.pdf",transparent=true)
+savefig("damage_lowTI2.pdf",transparent=true)

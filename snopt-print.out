@@ -5,11 +5,14 @@
       snopt-print.out
  XXX  Keyword not recognized:         SNOPT-PRINT.OUT
       Derivative option               1
+      Superbasics limit            1000
       Verify level              -1
+      Minor iteration limit         1000000
       snopt-summary.out
  XXX  Keyword not recognized:         SNOPT-SUMMARY.OU
       Major optimality tolerance  1.30000000E-04
       Major iteration limit         1000000
+      Iteration limit         1000000
 1
  
  SNMEMA EXIT 100 -- finished successfully
@@ -37,7 +40,7 @@
  QP subproblems
  --------------
  QPsolver Cholesky......
- Scale tolerance........     0.900       Minor feasibility tol..  1.00E-06       Iteration limit........     10000
+ Scale tolerance........     0.900       Minor feasibility tol..  1.00E-06       Iteration limit........   1000000
  Scale option...........         0       Minor optimality  tol..  1.00E-06       Minor print level......         1
  Crash tolerance........     0.100       Pivot tolerance........  3.25E-11       Partial price..........         1
  Crash option...........         3       Elastic weight.........  1.00E+04       Prtl price section ( A)        80
@@ -51,256 +54,7 @@
  Unbounded objective....  1.00E+15       Reduced Hessian dim....        80       Central difference int.  6.70E-05
  Major step limit.......  2.00E+00       Derivative linesearch..                 Derivative option......         1
  Major iterations limit.   1000000       Linesearch tolerance...   0.90000       Verify level...........        -1
- Minor iterations limit.       500       Penalty parameter......  0.00E+00       Major Print Level......         1
-                                         Major optimality tol...  1.30E-04
-
- Hessian Approximation
- ---------------------
- Limited-Memory Hessian.                 Hessian updates........        10       Hessian frequency......  99999999
-                                                                                 Hessian flush..........  99999999
-
- Nonlinear constraints
- ---------------------
- Nonlinear constraints..       980       Major feasibility tol..  1.00E-06       Violation limit........  1.00E+06
- Nonlinear Jacobian vars        80
-
- Miscellaneous
- -------------
- LU factor tolerance....      3.99       LU singularity tol.....  3.25E-11       Timing level...........         3
- LU update tolerance....      3.99       LU swap tolerance......  1.22E-04       Debug level............         0
- LU partial  pivoting...                 eps (machine precision)  2.22E-16       System information.....        No
-                                                                                 Sticky parameters......        No
-1
- 
-
- 
-
- Matrix statistics
- -----------------
-               Total      Normal        Free       Fixed     Bounded
- Rows            981         980           1           0           0
- Columns          80           0           0           0          80
-
- No. of matrix elements                78400     Density      99.898
- Biggest  constant element        0.0000E+00  (excluding fixed columns,
- Smallest constant element        0.0000E+00   free rows, and RHS)
-
- No. of objective coefficients             0
-
- Nonlinear constraints     980     Linear constraints       1
- Nonlinear variables        80     Linear variables         0
- Jacobian  variables        80     Objective variables     80
- Total constraints         981     Total variables         80
-1
- 
-
- 
- The user has defined   78480   out of   78480   first  derivatives
-1
- 
-
-    Itn       QPmult  QPstep   nInf   SumInf   rgNorm    QPobjective   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
-    100      1.7E+00 1.3E-01                  7.1E+00 -5.8965398E+00   1040   1040   1059  2.5E-01    7270         1 1.3E+02
- 
-
-   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-    157     0    157              1  1.6E-04  3.5E-02 -1.1290611E+01    7432           13 3.3E+07         _  r
-    159     1      2 3.7E-02      2  1.5E-04  2.8E-02 -9.8122768E+00    6388    13     12 8.7E+00 4.3E+01 _n rl
-    178     2     19 3.8E-02      3  1.4E-04  1.5E-03 -9.7551459E+00    6833           12 1.3E+05 4.8E+01 _s  l
-    227     3     49 1.2E-01      6  1.2E-04  9.1E-04 -1.0904464E+01    7465           13 3.6E+07 1.2E+01 _
-    238     4     11 1.4E-01      9  1.2E-04  1.4E-03 -1.0980734E+01    6639    13     11 9.8E+03 1.2E+01 _
-    303     5     65 1.8E-01     12  1.1E-04  1.0E-02 -1.1040719E+01    7349           15 3.6E+08 1.2E+01 _
-    331     6     28 2.1E-01     15  7.8E-05  8.7E-03 -1.1100495E+01    6698    14     16 1.0E+07 1.2E+01 _
-    368     7     37 1.6E-01     18  6.7E-05  4.5E-03 -1.1130717E+01    7159           18 1.1E+09 1.2E+01 _
-    394     8     26 1.8E-01     21  5.5E-05  3.5E-03 -1.1156621E+01    6583    15     18 5.2E+07 1.2E+01 _
-    408     9     14 2.0E-01     24  4.5E-05  1.8E-03 -1.1179606E+01    6341           19 3.0E+07 1.2E+01 _
-    421    10     13 1.4E-01     27  4.0E-05  2.2E-03 -1.1192975E+01    6189           17 1.2E+08 1.2E+01 _
-    468    11     47 1.7E-01     30  3.3E-05  2.0E-03 -1.1203404E+01    6763           20 1.1E+09 1.2E+01 _
-    490    12     22 3.9E-01     32  2.1E-05  6.3E-03 -1.1223626E+01    5882    13     35 2.8E+08 1.2E+01 _  R
-    501    13     11 1.0E+00     33  5.0E-06  1.3E-03 -1.1222511E+01    5061    17     33 3.2E+07 1.2E+01 _s
-    505    14      4 1.0E+00     34 (2.8E-07) 1.1E-03 -1.1231322E+01    4971           30 7.0E+01 1.2E+01 _
-    516    15     11 1.0E+00     35  5.1E-06  5.1E-04 -1.1234399E+01    5311           30 2.4E+07 1.2E+01 _
-    523    16      7 5.4E-01     37  2.6E-06  7.6E-04 -1.1235598E+01    5626           26 1.9E+08 1.2E+01 _
-    529    17      6 4.1E-01     39  1.6E-06  9.5E-04 -1.1237241E+01    5620           25 1.2E+07 1.2E+01 _
-    531    18      2 4.5E-01     41  1.1E-06  9.1E-04 -1.1238706E+01    5618           26 1.4E+07 1.2E+01 _
-
-         ==============================
-         S N O P T  7.2-12.3 (Aug 2014)
-         ==============================
-      snopt-print.out
- XXX  Keyword not recognized:         SNOPT-PRINT.OUT
-      Derivative option               1
-      Verify level              -1
-      snopt-summary.out
- XXX  Keyword not recognized:         SNOPT-SUMMARY.OU
-      Major optimality tolerance  1.30000000E-04
-      Major iteration limit         1000000
-1
- 
- SNMEMA EXIT 100 -- finished successfully
- SNMEMA INFO 104 -- memory requirements estimated
-      Total character workspace             500
-      Total integer   workspace         1298225
-      Total real      workspace          993575
-1
- 
- Parameters
- ==========
-
- Files
- -----
- Solution file..........         0       Old basis file ........         0       Standard input.........         5
- Insert file............         0       New basis file ........         0       (Printer)..............        18
- Punch file.............         0       Backup basis file......         0       (Specs file)...........         0
- Load file..............         0       Dump file..............         0       Standard output........         6
-
- Frequencies
- -----------
- Print frequency........       100       Check frequency........        60       Save new basis map.....       100
- Summary frequency......       100       Factorization frequency        50       Expand frequency.......     10000
-
- QP subproblems
- --------------
- QPsolver Cholesky......
- Scale tolerance........     0.900       Minor feasibility tol..  1.00E-06       Iteration limit........     10000
- Scale option...........         0       Minor optimality  tol..  1.00E-06       Minor print level......         1
- Crash tolerance........     0.100       Pivot tolerance........  3.25E-11       Partial price..........         1
- Crash option...........         3       Elastic weight.........  1.00E+04       Prtl price section ( A)        80
-                                         New superbasics........        99       Prtl price section (-I)       981
-
- The SQP Method
- --------------
- Minimize...............                 Cold start.............                 Proximal Point method..         1
- Nonlinear objectiv vars        80       Objective Row..........         1       Function precision.....  3.00E-13
- Unbounded step size....  1.00E+20       Superbasics limit......        80       Difference interval....  5.48E-07
- Unbounded objective....  1.00E+15       Reduced Hessian dim....        80       Central difference int.  6.70E-05
- Major step limit.......  2.00E+00       Derivative linesearch..                 Derivative option......         1
- Major iterations limit.   1000000       Linesearch tolerance...   0.90000       Verify level...........        -1
- Minor iterations limit.       500       Penalty parameter......  0.00E+00       Major Print Level......         1
-                                         Major optimality tol...  1.30E-04
-
- Hessian Approximation
- ---------------------
- Limited-Memory Hessian.                 Hessian updates........        10       Hessian frequency......  99999999
-                                                                                 Hessian flush..........  99999999
-
- Nonlinear constraints
- ---------------------
- Nonlinear constraints..       980       Major feasibility tol..  1.00E-06       Violation limit........  1.00E+06
- Nonlinear Jacobian vars        80
-
- Miscellaneous
- -------------
- LU factor tolerance....      3.99       LU singularity tol.....  3.25E-11       Timing level...........         3
- LU update tolerance....      3.99       LU swap tolerance......  1.22E-04       Debug level............         0
- LU partial  pivoting...                 eps (machine precision)  2.22E-16       System information.....        No
-                                                                                 Sticky parameters......        No
-1
- 
-
- 
-
- Matrix statistics
- -----------------
-               Total      Normal        Free       Fixed     Bounded
- Rows            981         980           1           0           0
- Columns          80           0           0           0          80
-
- No. of matrix elements                78400     Density      99.898
- Biggest  constant element        0.0000E+00  (excluding fixed columns,
- Smallest constant element        0.0000E+00   free rows, and RHS)
-
- No. of objective coefficients             0
-
- Nonlinear constraints     980     Linear constraints       1
- Nonlinear variables        80     Linear variables         0
- Jacobian  variables        80     Objective variables     80
- Total constraints         981     Total variables         80
-1
- 
-
- 
- The user has defined   78480   out of   78480   first  derivatives
-1
- 
-
-    Itn       QPmult  QPstep   nInf   SumInf   rgNorm    QPobjective   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
-    100      1.7E+00 1.3E-01                  7.1E+00 -5.8965398E+00   1040   1040   1059  2.5E-01    7270         1 1.3E+02
- 
-
-   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-    157     0    157              1  1.6E-04  3.5E-02 -1.1290611E+01    7432           13 3.3E+07         _  r
-    159     1      2 3.7E-02      2  1.5E-04  2.8E-02 -9.8122768E+00    6388    13     12 8.7E+00 4.3E+01 _n rl
-    178     2     19 3.8E-02      3  1.4E-04  1.5E-03 -9.7551459E+00    6833           12 1.3E+05 4.8E+01 _s  l
-    227     3     49 1.2E-01      6  1.2E-04  9.1E-04 -1.0904464E+01    7465           13 3.6E+07 1.2E+01 _
-    238     4     11 1.4E-01      9  1.2E-04  1.4E-03 -1.0980734E+01    6639    13     11 9.8E+03 1.2E+01 _
-    303     5     65 1.8E-01     12  1.1E-04  1.0E-02 -1.1040719E+01    7349           15 3.6E+08 1.2E+01 _
-    331     6     28 2.1E-01     15  7.8E-05  8.7E-03 -1.1100495E+01    6698    14     16 1.0E+07 1.2E+01 _
-    368     7     37 1.6E-01     18  6.7E-05  4.5E-03 -1.1130717E+01    7159           18 1.1E+09 1.2E+01 _
-    394     8     26 1.8E-01     21  5.5E-05  3.5E-03 -1.1156621E+01    6583    15     18 5.2E+07 1.2E+01 _
-    408     9     14 2.0E-01     24  4.5E-05  1.8E-03 -1.1179606E+01    6341           19 3.0E+07 1.2E+01 _
-    421    10     13 1.4E-01     27  4.0E-05  2.2E-03 -1.1192975E+01    6189           17 1.2E+08 1.2E+01 _
-    468    11     47 1.7E-01     30  3.3E-05  2.0E-03 -1.1203404E+01    6763           20 1.1E+09 1.2E+01 _
-    490    12     22 3.9E-01     32  2.1E-05  6.3E-03 -1.1223626E+01    5882    13     35 2.8E+08 1.2E+01 _  R
-    501    13     11 1.0E+00     33  5.0E-06  1.3E-03 -1.1222511E+01    5061    17     33 3.2E+07 1.2E+01 _s
-    505    14      4 1.0E+00     34 (2.8E-07) 1.1E-03 -1.1231322E+01    4971           30 7.0E+01 1.2E+01 _
-    516    15     11 1.0E+00     35  5.1E-06  5.1E-04 -1.1234399E+01    5311           30 2.4E+07 1.2E+01 _
-    523    16      7 5.4E-01     37  2.6E-06  7.6E-04 -1.1235598E+01    5626           26 1.9E+08 1.2E+01 _
-    529    17      6 4.1E-01     39  1.6E-06  9.5E-04 -1.1237241E+01    5620           25 1.2E+07 1.2E+01 _
-
-         ==============================
-         S N O P T  7.2-12.3 (Aug 2014)
-         ==============================
-      snopt-print.out
- XXX  Keyword not recognized:         SNOPT-PRINT.OUT
-      Derivative option               1
-      Verify level              -1
-      snopt-summary.out
- XXX  Keyword not recognized:         SNOPT-SUMMARY.OU
-      Major optimality tolerance  1.30000000E-04
-      Major iteration limit         1000000
-1
- 
- SNMEMA EXIT 100 -- finished successfully
- SNMEMA INFO 104 -- memory requirements estimated
-      Total character workspace             500
-      Total integer   workspace         1298225
-      Total real      workspace          993575
-1
- 
- Parameters
- ==========
-
- Files
- -----
- Solution file..........         0       Old basis file ........         0       Standard input.........         5
- Insert file............         0       New basis file ........         0       (Printer)..............        18
- Punch file.............         0       Backup basis file......         0       (Specs file)...........         0
- Load file..............         0       Dump file..............         0       Standard output........         6
-
- Frequencies
- -----------
- Print frequency........       100       Check frequency........        60       Save new basis map.....       100
- Summary frequency......       100       Factorization frequency        50       Expand frequency.......     10000
-
- QP subproblems
- --------------
- QPsolver Cholesky......
- Scale tolerance........     0.900       Minor feasibility tol..  1.00E-06       Iteration limit........     10000
- Scale option...........         0       Minor optimality  tol..  1.00E-06       Minor print level......         1
- Crash tolerance........     0.100       Pivot tolerance........  3.25E-11       Partial price..........         1
- Crash option...........         3       Elastic weight.........  1.00E+04       Prtl price section ( A)        80
-                                         New superbasics........        99       Prtl price section (-I)       981
-
- The SQP Method
- --------------
- Minimize...............                 Cold start.............                 Proximal Point method..         1
- Nonlinear objectiv vars        80       Objective Row..........         1       Function precision.....  3.00E-13
- Unbounded step size....  1.00E+20       Superbasics limit......        80       Difference interval....  5.48E-07
- Unbounded objective....  1.00E+15       Reduced Hessian dim....        80       Central difference int.  6.70E-05
- Major step limit.......  2.00E+00       Derivative linesearch..                 Derivative option......         1
- Major iterations limit.   1000000       Linesearch tolerance...   0.90000       Verify level...........        -1
- Minor iterations limit.       500       Penalty parameter......  0.00E+00       Major Print Level......         1
+ Minor iterations limit.   1000000       Penalty parameter......  0.00E+00       Major Print Level......         1
                                          Major optimality tol...  1.30E-04
 
  Hessian Approximation
@@ -349,70 +103,213 @@
  
 
     Itn       LPmult  LPstep   nInf   SumInf             LPobjective   +SBS   -SBS    -BS    Pivot     L+U ncp
-    100      1.4E-01 5.6E-01      1  1.0E-01                           1033   1033    431  3.4E+02    7275
+    100      9.4E-02 2.6E+00      6  7.7E+00                           1023   1023   1040  7.0E-01    7277
+    200      4.6E-01 5.0E-02      1  3.3E+00                           1025   1025    360  8.1E+01    7303
  
 
    Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-    158     0    158              1  2.0E-04  3.7E-02 -1.1290611E+01    7512            9 5.5E+02         _  r
-    169     1     11 2.0E-02      2  1.9E-04  1.7E-02 -6.2856675E+00    7254     9      5 4.1E+04 8.3E+01 _n rl
-    184     2     15 2.0E-02      3  1.8E-04  1.9E-02 -6.1271560E+00    7464            4 2.7E+03 9.0E+01 _s  l
-    236     3     52 3.8E-03      8  1.8E-04  1.3E-02 -1.0100448E+01    7486            6 5.4E+07 1.7E+01 _ m
+    266     0    266              1  1.5E-03  1.0E+00  4.1653774E+05    7512                              _  r i
 
-    Itn       QPmult  QPstep   nInf   SumInf   rgNorm    QPobjective   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
-    336              1.0E+00                  1.3E-14 -1.0312469E+01                                  7399         4 5.3E+05
-
-   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-    394     4    158 6.0E-02     12  1.7E-04  3.7E-03 -1.0076406E+01    7486     6     12 1.2E+07 1.7E+01 _ m
-
-    Itn       LPmult  LPstep   nInf   SumInf             LPobjective   +SBS   -SBS    -BS    Pivot     L+U ncp
-    494      2.6E+00 2.2E+00     11  1.1E+03                            407    407   1052  1.3E-02    7401
-    594      5.6E-04 3.0E+05      1  1.6E-01                            542    542   1056  2.2E-04    7422
-    694      2.0E+00 5.8E-01                  2.7E-03 -1.0146352E+01   1039   1039   1028  3.8E-01    7456   1     4 1.9E+02
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+    366              1.0E+00     15  1.4E+01  5.7E-09  1.0550451E+06                                  8033         9 1.1E+05
+    466              1.0E+00     13  1.1E+01  6.5E-09  4.5877850E+05                                  7391   1     7 3.2E+05
+    566              1.0E+00     13  1.0E+01  3.9E-10  2.7624099E+05                                  7556   1    15 8.2E+06
 
    Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-    779     5    385 2.9E-02     19  1.7E-04  5.2E-03 -1.0142192E+01    7594           13 2.8E+08 1.7E+01 _ M
+    605     1    339 9.5E-03      2  1.5E-03  1.0E+00  4.1254434E+05    7798           14 8.8E+05         _n rli
 
-    Itn       QPmult  QPstep   nInf   SumInf   rgNorm    QPobjective   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
-    879      1.9E-02 1.0E+00                  9.7E-12 -1.0721604E+01   1028                           7675        13 1.8E+07
-
-   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-    887     6    108 2.4E-02     25  1.7E-04  4.1E-03 -1.0190801E+01    7675           15 2.0E+08 1.7E+01 _ M
-    919     7     32 2.5E-02     31  1.6E-04  2.1E-03 -1.0213200E+01    6692           21 3.2E+08 1.8E+01 _ m
-
-    Itn       QPmult  QPstep   nInf   SumInf   rgNorm    QPobjective   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
-   1019              1.0E+00                  4.7E-13 -1.0996815E+01                                  7597   1    21 7.4E+09
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+    705              1.0E+00      4  4.3E+00  7.3E-09  1.1515437E+05                                  7949         5 2.2E+05
+    805              1.0E+00      1  1.7E+00  4.8E-13  5.9106328E+04                                  7515         7 1.4E+06
 
    Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-   1039     8    120 2.9E-02     36  1.5E-04  5.5E-03 -1.0298333E+01    7592           21 3.3E+09 1.8E+01 _ m
-   1070     9     31 3.3E-02     43  1.5E-04  5.5E-03 -1.0364527E+01    7465           23 1.1E+08 1.8E+01 _ M
-   1083    10     13 2.5E-02     49  1.4E-04  4.2E-03 -1.0409254E+01    5734           29 2.0E+06 1.8E+01 _ m
-   1128    11     45 8.8E-02     55  1.3E-04  3.4E-03 -1.0566392E+01    6649           23 3.0E+08 1.8E+01 _ M
-   1221    12     93 1.1E-01     58  1.1E-04  2.1E-02 -1.0710577E+01    7277           23 2.0E+09 1.8E+01 _  R
+    813     2    208 4.6E-02      4  1.5E-03  1.0E+00  4.0109481E+05    7542           11 9.5E+04         _sM li
 
-    Itn       QPmult  QPstep   nInf   SumInf   rgNorm    QPobjective   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
-   1321      7.7E-04 6.0E-01                  3.1E-04 -1.0975782E+01    854   1057        -4.9E-02    7778        12 7.3E+06
-
-   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-   1383    13    162 2.8E-01     61  8.2E-05  2.4E-03 -1.0574979E+01    7825           23 1.3E+08 2.3E+01 _s
-   1391    14      8 2.1E-01     64  6.8E-05  4.4E-03 -1.0782011E+01    5918    23     22 3.6E+08 2.3E+01 _
-   1404    15     13 3.8E-01     66  4.4E-05  3.1E-03 -1.1005570E+01    6253     4     18 1.5E+07 2.3E+01 _
-   1435    16     31 2.6E-01     70  3.3E-05  4.2E-03 -1.1088711E+01    6765           22 5.1E+08 2.3E+01 _ M
-   1496    17     61 3.7E-01     73  2.1E-05  1.1E-03 -1.1165738E+01    6952    15     24 1.3E+10 2.3E+01 _ M
-   1514    18     18 4.6E-01     76  1.2E-05  1.6E-03 -1.1195937E+01    6007           23 2.4E+07 2.3E+01 _ M
-   1522    19      8 4.0E-01     79  6.9E-06  7.3E-04 -1.1205128E+01    6097           22 8.4E+06 2.3E+01 _ M
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+    913      1.9E+05 3.0E-05     74  1.7E+04  3.2E-08  3.3844499E+08    115    115    153 -1.2E+00    7672         1 8.5E+07
+   1013      1.6E+04 2.1E-03     54  8.6E+03  1.6E+04  1.7370452E+08    407   1056   1053 -9.7E-01    7409         1 7.8E+03
+   1113      1.7E+05 1.0E+00     30  2.6E+03  1.5E-10  5.2965562E+07   1047                           7573         2 6.8E+01
+   1213      1.7E+03 1.5E-02     16  8.2E+01  1.7E+03  1.8430020E+06    854   1025         5.1E+00    7637         2 6.6E+06
+   1313      2.0E+04 1.1E-01     15  2.7E+01  1.8E+04  6.7497529E+05   1022   1038    915  1.2E+03    7593         1 1.1E+05
+   1413     -1.7E+04 6.3E-02     10  1.3E+01  9.5E+00  3.9891950E+05   1051   1051   1030  9.6E-01    7538         1 6.8E+01
+   1513      4.9E+04 9.4E-02      7  6.6E+00  3.1E+01  2.4314733E+05   1046   1046   1050  4.1E+00    7500         1 4.5E+02
+   1613              1.0E+00      2  1.8E+00  2.0E-11  1.1478891E+05                                  7499         3 1.3E+06
+   1713              5.8E-02                  7.7E+00  7.7891608E+04           831    535 -4.1E-01    7798         4 5.4E+03
 
    Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-   1535    20     13 4.0E-01     81  1.4E-05  6.9E-04 -1.1208170E+01    6345           20 2.1E+06 2.3E+01 _
-   1575    21     40 3.8E-01     83  7.4E-06  8.2E-04 -1.1212882E+01    6837           21 4.2E+07 2.3E+01 _
-   1579    22      4 4.9E-01     85  1.6E-05  9.6E-04 -1.1215262E+01    5922    16     20 5.4E+05 2.3E+01 _
-   1591    23     12 4.2E-01     87  1.6E-05  8.0E-04 -1.1216579E+01    6087           23 6.8E+07 2.3E+01 _  R
-   1598    24      7 1.0E+00     88 (7.6E-07) 8.5E-04 -1.1217783E+01    5822           21 5.6E+06 2.3E+01 _s
-   1604    25      6 2.0E-01     91 (3.6E-07) 8.4E-04 -1.1218637E+01    6082           18 2.6E+07 2.3E+01 _
-   1607    26      3 2.1E-01     94  1.1E-06  6.6E-04 -1.1219413E+01    6083           18 1.9E+07 2.3E+01 _
-   1618    27     11 2.0E-01     97 (7.5E-07) 9.4E-04 -1.1220269E+01    6169           18 8.5E+04 2.3E+01 _
-   1643    28     25 1.5E-01    101 (5.6E-07) 1.9E-03 -1.1221048E+01    6672           16 2.8E+05 2.3E+01 _ m
-   1656    29     13 2.0E-02    107 (5.5E-07) 9.0E-04 -1.1221472E+01    6683           22 6.2E+07 2.3E+01 _
-   1664    30      8 1.3E-01    110  1.6E-06  1.4E-03 -1.1222669E+01    6023           19 5.5E+07 2.3E+01 _
+   1772     3    959 1.0E+00      5  2.6E-03  6.7E-01  9.6978058E+04    7339    11     11 9.3E+05         _    i
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   1872              1.0E+00     34  4.5E+03  5.8E-11  9.0907202E+07                                  7626         2 7.1E+03
+   1972      4.5E+02 4.5E-02     12  2.3E+01  4.3E+02  6.6584963E+05    714   1052   1050 -6.1E+00    7599         3 8.1E+06
+   2072              1.0E+00     10  1.0E+01  8.3E-11  3.2404389E+05                                  7754         2 9.4E+01
+   2172      6.0E+03 1.0E+00      3  1.7E+00  1.4E-08  1.3701676E+05   1050                           7555   1     3 2.8E+02
+   2272      5.0E+02 1.0E+00                  1.3E-08  7.6917683E+04   1052                           7861   1     6 7.3E+05
+   2372      1.4E+01 2.8E-02                  1.4E+01  3.1876567E+04    542   1056        -3.9E-01    7568         9 7.6E+04
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+   2455     4    683 1.0E+00      6  2.6E-03  3.6E+00  4.8596129E+04    7714           24 5.0E+05 9.9E-04 _
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   2555     -4.6E+05 8.9E-03     20  3.6E+02  4.5E+05  7.7100175E+06   1055   1058   1056 -4.2E-01    7694         1 2.7E+07
+   2655              4.6E-02     12  1.5E+01  1.7E+02  4.0907925E+05          1048   1038 -1.5E-01    7651         2 7.9E+01
+   2755              1.0E+00      5  4.3E+00  6.1E-10  2.1360860E+05                                  7720         2 2.0E+04
+   2855      7.4E+03 2.8E-01      3  7.4E-01  1.2E+01  1.0683743E+05   1056   1056   1043 -1.9E+00    7535         1 4.8E+01
+   2955              1.0E+00                  1.0E-12  7.3884577E+04                                  7850         4 4.7E+01
+   3055              6.3E-01                  8.2E+00  1.9054806E+04           215        -4.2E+01    7755        12 9.4E+02
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+   3133     5    678 1.0E+00      7  3.8E-03  1.5E-01  2.1787577E+04    7877           27 2.5E+06 9.9E-04 _
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   3233     -9.4E+05 1.4E-02    114  4.8E+04           9.8694914E+08    133    133    486  1.1E+00    7448
+   3333     -1.5E+05 1.7E-01     91  2.2E+04           4.3960069E+08    691    691   1052  3.4E-02    7450
+   3433      1.9E+04 7.1E-03     60  8.7E+03           1.7609656E+08    166    166    187  1.0E+00    7800
+   3533     -1.7E+05 9.1E-04     34  2.6E+03           5.3261595E+07    259    259    272  4.8E+00    7631
+   3633     -1.7E+05 1.2E-01     17  4.4E+01  6.7E+02  1.1680621E+06   1034   1034   1049 -2.4E+00    7484         1 1.3E+02
+   3733      3.1E+02 1.9E-02     11  2.0E+01  3.0E+02  6.6044560E+05    754   1043        -4.6E+00    7464         2 5.7E+02
+   3833              1.0E+00      6  9.6E+00  1.2E-11  3.3990563E+05                                  7184         3 5.2E+01
+   3933              1.0E+00      4  7.5E+00  1.8E-11  2.1490400E+05                                  7713         5 7.0E+03
+   4033              1.0E+00      2  1.1E+00  9.1E-11  8.5114450E+04                                  7555         7 1.5E+05
+   4133              1.0E+00                  6.7E-11  3.1399553E+04                                  8034         7 5.5E+05
+   4233              1.0E+00                  1.3E-10  7.6464305E+03                                  7530        18 1.6E+04
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+   4272     6   1139 1.0E+00      8  1.6E-03  1.0E-01  8.6952175E+03    7601           27 2.1E+05 9.9E-04 _
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   4372     -1.3E+04 2.4E-01     14  2.5E+01  9.8E+03  7.0313408E+05   1034   1030   1046             7438         1 5.3E+06
+   4472      3.3E+03 3.4E-01     12  1.3E+01  1.4E+04  4.5360999E+05   1026   1026   1027  3.1E-01    8054         3 5.4E+02
+   4572              1.0E+00      4  4.9E+00  6.1E-08  2.6013364E+05                                  7734         4 3.7E+05
+   4672              1.0E+00      3  2.9E+00  9.6E-06  1.6184882E+05                                  7621         4 1.6E+04
+   4772              4.5E-03                  6.6E+01  6.4256605E+04          1059         2.2E-01    7459         5 3.9E+06
+   4872              1.0E+00                  3.8E-12  1.4047892E+04                                  7712        15 1.3E+06
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+   4952     7    680 1.0E+00      9  1.9E-03  5.3E-02  3.6082715E+03    7903           26 1.7E+06 9.9E-04 _
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   5052              1.0E+00     13  3.5E+02  1.3E-09  7.2942083E+06                                  7707         1 8.3E+08
+   5152              1.8E-01     12  2.0E+01  3.3E+02  5.7177547E+05          1046        -1.3E-01    7605         1 2.5E+02
+   5252      2.7E+02 1.2E-02     10  8.5E+00  2.7E+02  3.5333687E+05    671   1030         4.6E-01    7467         3 2.5E+05
+   5352      1.9E+02 1.6E-01      3  3.0E+00  1.6E+02  2.2264482E+05    448   1053         5.0E-01    7842         3 8.0E+03
+   5452              1.0E+00      1  1.9E-01  4.1E-10  8.9481650E+04                                  7794         1 1.9E+01
+   5552              1.0E+00      1  6.7E-01  5.2E-11  4.8064736E+04                                  7534         8 2.1E+04
+   5652              1.0E+00                  3.1E-11  1.1166965E+04                                  7832        18 3.1E+06
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+   5744     8    792 2.4E-01     11  1.4E-03  7.5E-02  4.0845370E+03    7950           33 5.3E+06 1.6E+01 _
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   5844              1.0E+00     29  2.7E+03  1.2E-10  5.4078154E+07                                  7942         1 4.2E+03
+   5944      8.8E+05 1.2E-03     24  5.7E+02  1.5E+04  1.1647651E+07   1028   1028   1026 -7.4E-01    7461         1 1.4E+03
+   6044      6.4E+02 6.1E-01     16  4.1E+01  2.5E+02  9.5258953E+05   1044   1039        -2.5E-02    7993         2 7.9E+01
+   6144     -4.2E+04 3.3E-01     14  2.0E+01  5.8E+02  5.2143709E+05   1053   1053   1026 -6.0E-01    7756         3 1.8E+02
+   6244              1.0E+00      8  9.2E+00  1.6E-11  2.7105541E+05                                  7594         2 5.6E+04
+   6344      6.5E+01 1.1E-01      6  4.0E+00  5.8E+01  1.5027138E+05    629   1033   1039 -2.3E+00    7867         5 2.0E+02
+   6444              8.9E-02                  1.3E+02  4.1839495E+04            90   1047 -1.4E-02    7595         5 3.5E+01
+   6544      9.9E+01 1.0E+00                  1.2E-09  9.5457224E+03   1028                           7857        19 2.2E+06
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+   6622     9    878 1.4E-01     13  1.3E-03  8.5E-02  4.0497390E+03    7894           28 3.5E+04 5.0E+01 _
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   6722     -1.3E+05 2.2E-03     28  1.1E+03           2.5158197E+07    743    743   1030 -6.4E-03    7920
+   6822              1.0E+00     13  2.7E+01  2.1E-14  9.5700923E+05                                  8023         1 6.6E+02
+   6922     -2.0E+04 1.9E-01     12  1.2E+01  1.4E+05  5.5655018E+05   1038   1038   1034  5.3E-01    7815         2 5.5E+04
+   7022              1.0E+00      3  6.5E+00  1.8E-10  3.7143269E+05                                  7863         2 4.7E+03
+   7122      1.7E+02 3.7E-02      4  2.3E+00  1.6E+02  1.7085968E+05    642    300    215  1.1E+00    7608         4 7.9E+04
+   7222              1.0E+00      3  1.0E+00  1.3E-12  7.3861258E+04                                  7930         4 3.4E+01
+   7322              1.2E-01                  7.2E+00  2.2434215E+04          1028   1046 -1.0E-01    7754         9 6.9E+01
+   7422      1.8E+00 7.4E-01                  4.7E-01  3.4271695E+03    870   1050        -9.9E-02    7938        23 2.5E+06
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+   7453    10    831 1.0E-01     16  1.1E-03  3.8E-02  4.0138094E+03    7937           32 6.1E+06 2.3E+01 _
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   7553     -2.5E+05 8.7E-01     27  3.2E+03           6.5070984E+07   1048   1048    484 -8.3E+01    7900
+   7653              1.0E+00     20  4.3E+01  3.0E-10  1.4453200E+06                                  7658         1 1.6E+05
+   7753      6.1E+03 1.0E+00     15  2.6E+01  1.1E-10  7.8824961E+05   1059                           7527         2 6.5E+00
+   7853     -8.2E+03 7.4E-01     12  9.4E+00  6.6E+03  4.4696535E+05   1051   1051    789 -2.3E+02    8050         2 1.4E+03
+   7953      3.2E+02 3.1E-02      7  6.2E+00  3.1E+02  3.3733082E+05    767   1046        -9.0E-01    7668         5 6.9E+05
+   8053      2.2E+02 8.5E-01      4  1.9E+00  3.3E+01  2.0673305E+05    151   1034   1037  4.5E+00    7511         3 3.1E+04
+   8153     -3.5E+04 1.0E+00      3  4.0E-01  3.3E-08  1.2290046E+05   1042                           7825         5 2.8E+05
+   8253              1.9E-01                  1.9E+01  4.7441615E+04          1026   1046  9.0E-01    7669         9 3.8E+03
+   8353              1.0E+00                  1.8E-08  1.2929956E+04                                  7885        16 7.8E+05
+   8453              1.0E+00                  2.6E-11  1.8635084E+03                                  8060        29 4.3E+06
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+   8455    11   1002 4.8E-01     18  8.4E-04  8.6E-02  2.6381190E+03    8060           30 4.3E+06 1.3E+01 _
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   8555      8.4E+04 1.0E+00      8  7.1E+00  5.6E-07  6.8939021E+05   1060                           8164        13 1.4E+05
+   8655              1.0E+00      7  2.6E+00  3.3E-11  2.0303115E+05                                  6797        12 1.5E+04
+   8755              7.9E-02      2  4.5E-01  1.7E+01  3.5966819E+04          1040        -4.4E-01    7278   1    27 7.2E+06
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+   8789    12    334 1.0E+00     19  7.3E-04  7.1E-02  1.7509971E+03    7389           38 1.5E+07 1.3E+01 _  R i
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   8889              1.0E+00      6  2.6E+02  4.3E-09  5.5934542E+06                                  8437         6 1.4E+02
+   8989     -1.6E+04 1.0E+00      9  4.4E+00  1.5E-07  4.3597301E+05   1047                           7941         7 5.6E+03
+   9089      1.3E+02 1.0E-02      4  2.7E+00  1.2E+02  2.8700306E+05    706   1055         2.1E-01    8080        15 9.7E+05
+   9189              1.0E+00      3  6.2E-01  2.7E-10  5.6386890E+04                                  7346   1    24 2.0E+06
+   9289              1.0E+00                  2.7E-10  6.2789152E+03                                  7605   1    31 1.8E+06
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+   9295    13    506 1.0E+00     20  6.9E-04  1.7E-01  1.2270138E+04    7605           34 2.6E+06 9.0E+02 _s
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   9395      3.2E+03 1.0E+00      4  8.6E-01  3.0E-08  3.5528517E+05   1032                           8141        16 1.9E+06
+   9495      7.2E+01 1.0E+00      4  8.3E-01  3.1E-07  5.6323751E+04    766                           8159        21 6.9E+06
+   9595      1.2E+02 1.0E+00                  1.4E-11  7.7241402E+03   1052                           7593        25 4.1E+06
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+   9621    14    326 2.7E-01     22  5.2E-04  5.3E-02  9.7640834E+03    7640           33 3.7E+06 8.6E+01 _
+   9680    15     59 3.6E-01     24  4.4E-04  3.4E-02  7.8556228E+03    7699           31 7.0E+06 5.9E+01 _
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   9780              1.0E+00      2  7.1E-01  3.6E-11  1.0642991E+05                                  7751        21 3.6E+07
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+   9874    16    194 1.0E+00     25  4.4E-04  5.0E-02  4.0467172E+03    7772           33 2.7E+07 5.9E+01 _
+   9946    17     72 1.2E-01     27  4.0E-04  5.2E-02  4.0384014E+03    7518           32 4.9E+06 3.0E+02 _
+   9975    18     29 1.4E-01     29  3.5E-04  3.8E-02  3.7623006E+03    5332    32     38 4.1E+06 1.7E+02 _
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+  10075      2.5E+03 1.0E+00     12  1.3E+01  1.6E-08  5.7544839E+05   1043                           7596        13 7.4E+02
+  10175     -5.1E+03 1.0E+00      7  3.1E+00  3.5E-07  2.0619947E+05   1059                           7799        19 1.5E+05
+  10275              1.0E+00      2  6.6E-01  2.6E-10  5.4248303E+04                                  7960        25 2.5E+06
+  10375              1.0E+00                  1.2E-11  8.9012304E+03                                  8047        30 1.7E+07
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  10416    19    441 2.0E-01     31  3.0E-04  4.9E-02  3.0040698E+03    8089           34 3.9E+06 1.7E+02 _
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+  10516              1.0E+00      2  3.9E-01  1.3E-10  6.3410531E+04                                  8087        15 1.2E+07
+  10616      2.0E+01 1.0E+00                  4.6E-09  1.2707552E+04    316                           8085        27 1.7E+07
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  10691    20    275 1.5E-01     33  2.8E-04  4.3E-02  2.6945660E+03    8067           38 1.2E+07 1.7E+02 _
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+  10791              8.2E-03      3  1.2E+00  5.9E+02  1.3880790E+05          1047         1.8E+00    7842        19 6.8E+05
+  10891              1.0E+00                  2.3E-10  2.9805256E+04                                  7853        25 1.4E+08
+  10991      1.9E-01 1.0E+00                  8.4E-09  8.8250463E+02    940                           7857        38 1.7E+09
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  10992    21    301 3.5E-01     35  1.9E-04  4.3E-02  1.7817095E+03    7857           38 1.7E+09 1.7E+02 _
+  10999    22      7 2.7E-01     37  1.4E-04  2.3E-02  1.5436614E+03    7491           42 2.4E+08 1.7E+02 _
+  11015    23     16 2.9E-01     39  1.1E-04  1.9E-02  1.2391990E+03    4866    42     37 6.0E+04 1.7E+02 _  R
+  11067    24     52 2.9E-01     41  9.3E-05  2.4E-02  1.3242644E+03    6100           42 6.8E+07 4.7E+02 _s   i
+  11072    25      5 3.5E-01     43  6.8E-05  1.7E-02  2.2226870E+03    4207           42 8.8E+02 9.0E+03 _    i
+  11080    26      8 4.3E-01     45  5.1E-05  1.7E-02  2.5645878E+03    4374           41 8.2E+03 1.1E+05 _    i
+  11089    27      9 5.6E-01     47  3.4E-05  2.0E-02  1.9720778E+03    4620           37 3.8E+03 5.2E+03 _
+  11116    28     27 4.3E-01     49  2.6E-05  1.6E-02  1.5173773E+03    5021    12     39 6.2E+06 2.2E+03 _
+  11134    29     18 1.0E+00     50  5.1E-05  1.8E-02  6.6560194E+02    5198           40 2.6E+07 2.1E+03 _    i
+  11148    30     14 7.4E-01     52  1.8E-05  1.4E-02  4.2323460E+02    5278           40 2.3E+06 3.2E+04 _
+  11153    31      5 1.0E+00     53  2.2E-06  2.8E-02  1.0092383E+01    5257           44 3.3E+06 4.9E+03 _
+  11167    32     14 1.0E+00     54 (8.4E-07) 5.9E-02 -1.0639437E+01    5257           51 1.2E+07 4.3E+03 _
 
          ==============================
          S N O P T  7.2-12.3 (Aug 2014)
@@ -420,11 +317,14 @@
       snopt-print.out
  XXX  Keyword not recognized:         SNOPT-PRINT.OUT
       Derivative option               1
+      Superbasics limit            1000
       Verify level              -1
+      Minor iteration limit         1000000
       snopt-summary.out
  XXX  Keyword not recognized:         SNOPT-SUMMARY.OU
       Major optimality tolerance  1.30000000E-04
       Major iteration limit         1000000
+      Iteration limit         1000000
 1
  
  SNMEMA EXIT 100 -- finished successfully
@@ -452,7 +352,7 @@
  QP subproblems
  --------------
  QPsolver Cholesky......
- Scale tolerance........     0.900       Minor feasibility tol..  1.00E-06       Iteration limit........     10000
+ Scale tolerance........     0.900       Minor feasibility tol..  1.00E-06       Iteration limit........   1000000
  Scale option...........         0       Minor optimality  tol..  1.00E-06       Minor print level......         1
  Crash tolerance........     0.100       Pivot tolerance........  3.25E-11       Partial price..........         1
  Crash option...........         3       Elastic weight.........  1.00E+04       Prtl price section ( A)        80
@@ -466,7 +366,7 @@
  Unbounded objective....  1.00E+15       Reduced Hessian dim....        80       Central difference int.  6.70E-05
  Major step limit.......  2.00E+00       Derivative linesearch..                 Derivative option......         1
  Major iterations limit.   1000000       Linesearch tolerance...   0.90000       Verify level...........        -1
- Minor iterations limit.       500       Penalty parameter......  0.00E+00       Major Print Level......         1
+ Minor iterations limit.   1000000       Penalty parameter......  0.00E+00       Major Print Level......         1
                                          Major optimality tol...  1.30E-04
 
  Hessian Approximation
@@ -515,68 +415,404 @@
  
 
     Itn       LPmult  LPstep   nInf   SumInf             LPobjective   +SBS   -SBS    -BS    Pivot     L+U ncp
-    100      1.4E+00 2.1E-03      3  9.9E-01                           1054   1054   1056  2.3E+00    7280
-    200              1.0E+00                  2.7E-14 -3.0034762E+00                                  7611         3 6.5E+02
+    100      1.8E-02 2.1E+01      8  1.0E+01                            754    754   1022  3.6E-02    7288
+    200      9.8E+02 7.8E-04      4  5.0E+00           1.0104095E+05   1041   1041    976  3.5E+02    7302
  
 
    Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-    211     0    211              1  2.4E-04  4.4E-02 -1.1290611E+01    7679            6 6.1E+02         _  r
-    220     1      9 1.3E-02      2  2.3E-04  3.5E-02  2.8440742E+00    7389     6      2 4.2E+00 1.5E+02 _n rl
-    273     2     53 1.1E-02      3  2.3E-04  1.8E-02  4.2522309E+00    7812            3 1.5E+05 1.7E+02 _s  l
+    223     0    223              1  1.7E-03  9.8E-01  5.1778595E+05    7520                              _  r i
 
-    Itn       QPmult  QPstep   nInf   SumInf   rgNorm    QPobjective   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
-    373      1.5E-01 1.0E+00                  1.1E-14 -6.6437129E+00   1058                           7546         3 4.2E+05
-
-   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-    380     3    107 1.8E-02      8  2.2E-04  2.7E-03 -8.7571760E+00    7561     3      2 1.6E+00 2.4E+01 _ M
-
-    Itn       QPmult  QPstep   nInf   SumInf   rgNorm    QPobjective   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
-    480      4.7E+00 8.5E-01                  7.2E-01 -3.9765299E+00   1040   1056   1033  6.7E+00    7812         1 1.3E+03
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+    323      2.3E+03 5.7E-01     17  3.0E+01  1.0E+03  2.2926114E+06    852   1057   1058 -4.5E-01    7869         1 7.3E+00
+    423      1.8E+04 1.0E+00     17  2.2E+01  5.6E-10  1.3133196E+06   1058                           7715         2 1.4E+04
+    523              1.0E+00     16  1.6E+01  2.9E-10  6.4107645E+05                                  7592         5 1.3E+03
+    623     -3.5E+03 1.0E+00     17  1.5E+01  4.4E-09  4.2419647E+05   1049                           7927        12 1.7E+06
 
    Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-    559     4    179 1.7E-02     14  2.2E-04  8.3E-03 -9.0105932E+00    7652            4 2.4E+05 2.2E+01 _ M
+    707     1    484 8.3E-03      2  1.7E-03  1.0E+00  5.1390902E+05    7646           18 6.8E+06         _n rli
 
-    Itn       QPmult  QPstep   nInf   SumInf   rgNorm    QPobjective   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
-    659      2.4E+00 1.0E+00                  5.5E-12 -9.5791942E+00   1050                           7446         5 5.2E+06
-
-   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-    735     5    176 3.9E-02     18  2.2E-04  8.9E-03 -9.0705301E+00    7783     4     14 5.4E+07 2.2E+01 _ M
-    826     6     91 5.7E-02     24  2.2E-04  7.4E-03 -9.3584413E+00    7684           15 4.0E+07 2.2E+01 _ M
-
-    Itn       QPmult  QPstep   nInf   SumInf   rgNorm    QPobjective   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
-    926      2.1E+00 8.2E-01                  1.3E-03 -8.8315720E+00   1050   1050   1023  1.7E+00    7680         3 4.4E+02
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+    807      3.4E+04 5.2E-04     22  9.6E+02  3.4E+04  1.9793100E+07    777   1059   1060 -1.6E-01    7720         1 3.7E+03
+    907      4.3E+04 4.1E-02     13  1.9E+01  4.8E+02  6.2799179E+05   1054   1054   1052  1.7E+00    7526         1 1.6E+03
+   1007     -7.4E+03 7.6E-01     10  1.1E+01  1.2E+01  3.6980876E+05   1022   1022   1023 -2.4E+00    7464         2 1.4E+00
+   1107              1.0E+00      8  6.7E+00  1.7E-10  2.0464705E+05                                  7863         2 6.1E+05
+   1207              2.8E-01      2  4.1E+00  2.3E+01  1.4025415E+05           895   1050 -4.5E-04    7778         2 2.3E+01
+   1307      3.5E+02 1.0E+00      1  4.0E+00  7.1E-11  1.1385908E+05   1053                           7715   1     6 2.8E+05
 
    Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-   1023     7    197 7.8E-02     28  2.1E-04  6.9E-03 -9.6808271E+00    8022    15     14 5.0E+07 2.2E+01 _
+   1311     2    604 3.8E-02      4  1.8E-03  1.0E+00  5.0368728E+05    7715            8 3.2E+05         _sm li
 
-    Itn       LPmult  LPstep   nInf   SumInf             LPobjective   +SBS   -SBS    -BS    Pivot     L+U ncp
-   1123      2.6E-01 1.4E-01      1  3.7E-01                           1032   1032   1041  2.8E-01    7899
-   1223              1.0E+00                  2.8E-17 -6.8718978E+00                                  7593         1 1.0E+01
-   1323              2.0E-01                  1.9E+00 -1.0339042E+01          1040        -3.8E-02    7965         5 3.7E+07
-   1423      4.4E-03 1.0E+00                  1.7E-13 -1.0873831E+01   1056                           7517        16 1.8E+07
-
-   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-   1423     8    400 1.3E-01     31  1.8E-04  1.2E-02 -1.0050568E+01    7517           16 1.8E+07 2.2E+01 _
-   1492     9     69 1.4E-01     34  1.6E-04  3.4E-02 -1.0259479E+01    7738           20 4.5E+08 2.2E+01 _
-   1550    10     58 1.3E-01     37  1.4E-04  1.5E-02 -1.0419686E+01    7023    20     19 9.8E+07 2.2E+01 _
-
-    Itn       QPmult  QPstep   nInf   SumInf   rgNorm    QPobjective   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
-   1650      3.2E-03 1.0E+00                  3.4E-13 -1.0939310E+01   1039                           7766        11 1.9E+07
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   1411      1.1E+04 2.8E-01     34  2.5E+03           5.0715524E+07    766    766   1058 -8.6E-03    7369
+   1511              1.0E+00     18  8.7E+01  8.7E-11  2.1026732E+06                                  7563         1 7.7E+07
+   1611      2.8E+05 1.8E-01     16  5.7E+01  1.9E+03  1.4017069E+06   1044   1044   1053 -4.2E+00    7637         1 6.9E+02
+   1711     -8.8E+03 2.9E-01     19  3.4E+01  1.9E+03  8.5710145E+05   1053   1053   1027  1.7E-01    7678         1 2.5E+05
+   1811     -6.9E+04 3.0E-01     13  2.9E+01  4.8E+04  7.0385968E+05   1023   1043   1027  2.4E+00    7568         2 1.5E+05
+   1911              1.0E+00     17  1.5E+01  7.6E-11  3.4941379E+05                                  7562         4 5.7E+04
+   2011              1.7E-02     11  8.9E+00  2.3E+02  2.3151532E+05          1047   1050 -2.5E-01    7555         2 2.8E+05
+   2111      1.5E+04 3.6E-01      8  6.8E+00  5.3E+01  1.8253031E+05   1041   1041   1042  7.9E+00    7206         2 3.0E+01
+   2211      2.7E+01 2.3E-01      4  4.2E+00  9.1E+01  1.3035772E+05    245    245   1022  1.9E-02    7745         5 3.8E+04
+   2311              6.5E-02      1  1.9E+00  4.1E-01  8.0973723E+04           754    889  1.0E+01    7650        10 3.6E+04
 
    Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-   1700    11    150 1.1E-01     40  1.3E-04  9.5E-03 -1.0454660E+01    7774           19 2.8E+08 2.2E+01 _
-   1777    12     77 1.2E-01     43  1.1E-04  1.0E-02 -1.0517118E+01    7460    19     18 1.1E+09 2.2E+01 _  R
-   1848    13     71 2.0E-01     46  1.0E-04  3.8E-02 -1.0181996E+01    7613           16 3.3E+08 2.2E+01 _s
-   1907    14     59 4.6E-01     48  1.0E-04  4.0E-02 -9.7613234E+00    7565           24 1.3E+09 2.2E+01 _
-   1971    15     64 5.1E-01     50  4.0E-05  1.0E-02 -1.0463335E+01    7590           25 2.7E+08 2.2E+01 _
-   1991    16     20 4.6E-01     52  3.6E-05  2.1E-02 -1.0665228E+01    5866           30 3.2E+07 2.2E+01 _
-   2011    17     20 5.8E-01     55  1.9E-05  1.3E-02 -1.0952125E+01    5681    15     33 1.6E+08 2.2E+01 _ m
-   2022    18     11 1.0E+00     56  8.5E-06  4.7E-03 -1.1056937E+01    5018           35 5.2E+05 2.2E+01 _
-   2032    19     10 6.4E-01     58  3.4E-06  2.9E-03 -1.1067757E+01    5178           34 1.9E+05 2.2E+01 _
+   2312     3   1001 1.0E+00      5  1.8E-03  5.3E-01  8.4754931E+04    7650           10 3.6E+04         _    i
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   2412      4.7E+06 8.3E-04     31  3.4E+03           6.8154688E+07   1026   1026   1029 -2.1E-01    7829
+   2512              1.0E+00     24  5.2E+01  2.5E-11  1.1465204E+06                                  7600         1 9.7E+04
+   2612              4.8E-02     18  2.5E+01  4.1E+01  5.7694841E+05           586   1032  2.3E-03    7560         1 4.9E+00
+   2712              1.0E+00     17  1.6E+01  6.4E-10  3.7780212E+05                                  7561         2 1.6E+02
+   2812              1.0E+00      9  8.2E+00  7.3E-12  2.2161379E+05                                  7447         4 5.7E+04
+   2912     -1.3E+04 7.0E-01      5  3.0E+00  1.8E+01  1.2080756E+05   1056   1056   1049             7420         1 2.3E+02
+   3012              1.0E+00      1  1.6E+00  1.5E-10  9.1084810E+04                                  7717         3 7.2E+01
+   3112              1.0E+00      1  4.8E-01  9.5E-13  5.8935728E+04                                  7606         2 1.5E+01
+   3212      2.3E+00 1.0E+00                  3.1E-09  4.2010885E+04    946                           7752   1    10 1.7E+03
 
    Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-   2049    20     17 4.4E-01     60  3.8E-06  2.8E-03 -1.1077730E+01    5422           28 2.3E+06 2.2E+01 _
-   2060    21     11 1.6E-01     63  4.1E-06  2.7E-03 -1.1083179E+01    5416    10     32 2.1E+08 2.2E+01 _
+   3217     4    905 8.0E-01      7  1.6E-03  2.6E-01  7.4293641E+04    7752           13 6.7E+05 6.6E-01 _
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   3317     -1.0E+08 1.0E-04     97  5.4E+04           1.0893945E+09   1040   1040    263  2.8E+02    7463
+   3417      1.0E+05 2.0E-04     81  1.4E+04           2.9032882E+08    311    311    797 -1.7E+00    7955         1 7.7E+03
+   3517      3.7E+04 6.6E-04     61  8.2E+03           1.6645433E+08    606    606    394 -9.9E-01    7750
+   3617     -5.2E+05 2.9E-03     35  2.7E+03           5.6146119E+07    160    160   1051  1.4E-02    7764
+   3717     -4.7E+03 1.0E+00     25  6.2E+01  6.4E-12  1.7062676E+06   1032                           7514         2 2.8E+00
+   3817     -3.3E+04 1.0E+00     20  3.7E+01  1.0E-09  9.4340516E+05   1029                           7476         3 7.4E+03
+   3917     -9.7E+02 1.0E+00     14  2.2E+01  7.6E-11  6.6195984E+05   1033                           7181         4 2.3E+02
+   4017      9.4E+04 2.8E-01     11  1.2E+01  6.7E+04  3.5472256E+05   1060   1040   1043 -1.4E+00    7954         2 2.1E+04
+   4117              1.0E+00      2  3.5E+00  2.0E-10  1.3838056E+05                                  7807         4 4.6E+01
+   4217      1.4E+01 2.9E-03                  1.4E+01  5.7785394E+04    914   1048         1.1E+00    7551         8 1.5E+06
+   4317      1.9E+02 1.0E+00                  6.3E-11  2.3955332E+04   1040                           7858         9 2.0E+05
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+   4357     5   1140 1.0E+00      8  1.5E-03  1.1E-01  6.5590704E+04    7963           15 2.2E+05 6.6E-01 _
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   4457     -1.5E+09 3.7E-05    280  7.9E+05           1.5820286E+10   1053   1053    396  2.1E+02    8058
+   4557     -1.1E+06 2.3E-05    282  3.3E+05           6.6756885E+09    683    683    139 -6.7E-01    7405
+   4657     -9.6E+07 5.4E-05    266  1.5E+05           2.9900769E+09   1026   1026    341 -1.5E+02    7411
+   4757     -2.1E+06 4.1E-07    244  9.9E+04           1.9967426E+09    197    197    201  8.1E+00    7403
+   4857     -4.1E+07 2.2E-04    206  6.4E+04           1.2917055E+09   1039   1039   1025 -7.4E+00    7415
+   4957     -2.5E+04 6.6E-03    181  4.3E+04           8.7401604E+08    344    344    643 -1.1E+00    7420
+   5057     -2.1E+08 5.6E-05    122  2.4E+04           4.8917267E+08   1031   1031    121  1.2E+03    7431
+   5157      4.5E+06 3.5E-03     74  1.2E+04           2.5806574E+08   1025   1025     99 -4.1E+02    7457
+   5257      5.3E+05 1.9E-02     27  1.8E+03           3.7622905E+07   1032   1032   1027 -3.2E-01    7497
+   5357              5.9E-02     11  3.0E+01  1.0E+01  7.9595340E+05           434   1022             7319         1 2.0E+02
+   5457              1.0E+00      9  9.9E+00  1.8E-09  2.6773886E+05                                  7698         3 4.2E+01
+   5557              9.5E-01      3  1.7E+00  2.5E+00  8.7946993E+04          1051   1029  2.0E-01    7588         2 4.1E+00
+   5657              1.0E+00                  7.0E-09  3.2604190E+04                                  7577        10 2.4E+06
+   5757              1.9E-01                  2.4E+00  9.0332890E+03           523        -1.7E+01    7839        25 4.4E+06
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+   5806     6   1449 1.0E+00     10  1.7E-03  5.4E-02  3.8536852E+04    7877           33 8.7E+05 6.6E-01 _ m
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   5906      4.4E+02 3.4E-01                  8.9E+02  3.0722297E+04   1059   1059   1035  8.5E-01    6827         9 1.9E+03
+   6006      2.1E+02 1.0E+00                  2.1E-10  1.6899845E+04   1056                           7625        12 3.4E+04
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+   6088     7    282 1.0E+00     11  2.5E-03  1.1E-01  5.9880262E+03    7778    33     22 9.2E+05 6.6E-01 _
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   6188      7.6E+05 1.7E-04    121  5.0E+04           1.0200307E+09    137    137    956 -1.3E+01    8047
+   6288     -5.2E+06 3.9E-04    111  2.3E+04           4.6830641E+08    193    193    771  1.3E+01    8291
+   6388      3.9E+04 1.9E-02     74  1.0E+04           2.0966123E+08    263    263   1054  6.2E-05    7898
+   6488     -4.0E+06 3.1E-03     50  3.8E+03           7.9777434E+07   1045   1045   1043 -4.7E-01    7451
+   6588      2.9E+05 1.1E-01     23  8.0E+01           2.5276026E+06   1026   1026   1043 -1.7E-01    7471
+   6688              1.0E+00     19  4.3E+01  1.9E-12  1.0842048E+06                                  7522         2 3.7E+00
+   6788              1.0E+00     16  2.0E+01  8.7E-11  5.7969086E+05                                  7547         4 5.8E+04
+   6888      2.5E+03 1.7E-01     11  1.4E+01  9.6E+03  3.9550793E+05   1028   1028   1038  4.0E-01    7488         3 4.1E+03
+   6988              1.0E+00      7  7.0E+00  1.2E-10  2.1971601E+05                                  7899         4 2.0E+02
+   7088      8.8E+03 1.0E+00                  2.6E-09  5.5868356E+04   1048                           7826         5 3.5E+04
+   7188              1.0E+00                  7.1E-11  1.2810113E+04                                  8194        13 5.3E+02
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+   7233     8   1145 1.0E+00     12  1.3E-03  1.0E-01  8.1562315E+03    7539           24 1.7E+06 7.6E+01 _
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   7333      2.1E+01 6.6E-01                  7.3E+00  9.3832311E+03    578   1032        -1.6E-01    7555   2    13 3.4E+05
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+   7409     9    176 2.6E-01     14  1.0E-03  9.4E-02  8.1216866E+03    7572    24     29 1.4E+07 1.2E+01 _
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   7509      1.1E+05 7.7E-04     45  8.5E+03           1.7247076E+08     98     98   1037 -4.3E-03    7475
+   7609      1.2E+04 1.4E-02     29  1.4E+03           2.9466339E+07    700    700   1055  3.6E-03    7479
+   7709     -1.3E+04 1.0E+00     12  2.1E+01  3.2E-10  8.3847700E+05   1025                           7527         3 2.7E+01
+   7809      4.8E+03 1.0E+00      9  1.8E+01  1.4E-09  5.4138855E+05   1025                           7496         5 2.5E+04
+   7909      6.1E+03 1.0E+00      7  6.2E+00  1.3E-08  2.3046374E+05   1022                           7939         3 3.1E+02
+   8009              1.0E+00      2  9.8E-01  1.6E-10  7.9783933E+04                                  7707         5 3.5E+01
+   8109      4.9E+02 1.0E+00                  1.2E-10  1.8688653E+04   1043                           7558        17 4.8E+06
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+   8156    10    747 2.1E-01     16  8.2E-04  9.3E-02  7.5388261E+03    7736           18 9.3E+06 9.8E+00 _
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   8256              6.2E-01                  1.8E+01  3.4600349E+04          1060        -2.8E-01    7976        12 1.6E+06
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+   8342    11    186 2.4E-01     18  6.3E-04  4.8E-02  7.8053028E+03    8081           21 9.2E+05 1.1E+01 _
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   8442      2.4E+05 1.1E-03     53  9.8E+03           2.1167975E+08    242    242    245  1.4E+00    7965
+   8542      2.6E+05 1.6E-02     29  1.8E+03  2.6E+05  4.1836615E+07    341   1055         1.7E+01    7976         1 1.4E+03
+   8642      2.2E+03 5.3E-02     23  5.2E+01  2.1E+03  2.2664486E+06    526   1054   1052  1.5E+00    7588         2 4.8E+00
+   8742      2.0E+04 2.0E-01     18  3.6E+01  1.2E+04  1.3921903E+06   1054   1054   1026  3.5E-01    7590         6 2.2E+05
+   8842              3.1E-01     11  1.3E+01  1.3E+02  6.2488415E+05          1042        -6.0E-01    8080        10 1.4E+05
+   8942              1.0E+00      5  1.3E+00  1.2E-06  1.1442070E+05                                  7945        17 9.8E+05
+   9042      4.8E+02 1.0E+00                  1.2E-09  1.8626501E+04   1025                           7571        24 2.8E+06
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+   9077    12    735 1.4E-01     20  6.2E-04  6.6E-02  8.0830576E+03    7586           32 3.6E+06 1.5E+01 _  R
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   9177              8.7E-02     13  3.2E+01           2.9761223E+06           628   1024  8.4E-03    7801
+   9277              1.0E+00     10  6.5E+00  5.3E-10  1.5812003E+06                                  7574         2 6.9E+03
+   9377      7.2E+03 1.0E+00     14  1.4E+01  6.7E-07  9.6925264E+05   1038                           7869        12 5.2E+05
+   9477      1.7E+04 1.0E+00     12  6.6E+00  1.6E-07  4.6340308E+05   1057                           7619        11 1.0E+06
+   9577              1.0E+00      6  2.5E+00  9.8E-11  2.0021148E+05                                  7830        17 1.3E+05
+   9677              1.0E+00      4  1.5E+00  3.8E-11  6.0648561E+04                                  7620        23 4.1E+05
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+   9735    13    658 2.1E-01     22  5.2E-04  7.0E-02  9.5032971E+03    7814           25 1.7E+06 7.7E+01 _s
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   9835     -7.1E+03 1.0E+00      4  1.0E+00  7.0E-09  1.5509011E+05   1027                           7322   2    19 2.2E+06
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+   9918    14    183 1.5E-01     24  4.6E-04  7.9E-02  1.2351781E+04    7359           27 5.0E+07 6.8E+02 _
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+  10018      1.3E+03 1.0E+00     13  9.0E+00  5.8E-09  6.7373020E+05   1043                           7717   3    14 2.2E+05
+  10118     -2.2E+03 1.0E+00     11  4.8E+00  6.7E-11  3.1171083E+05   1051                           6508        19 4.2E+04
+  10218      2.6E+01 9.5E-03      5  1.3E+00  2.6E+01  6.6755431E+04    974   1045        -3.7E-01    7209   1    26 8.4E+06
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  10260    15    342 2.6E-01     26  3.9E-04  8.3E-02  1.0455143E+04    7464           25 4.0E+06 7.4E+01 _    i
+  10295    16     35 1.7E-01     28  3.6E-04  5.6E-02  1.4443913E+04    7638           27 6.2E+06 1.3E+03 _    i
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+  10395      5.0E+05 1.3E-03    116  4.0E+04           8.3745615E+08    681    681     83  4.5E-01    7505
+  10495      1.1E+05 2.8E-03     95  2.1E+04           4.4210933E+08    619    619   1031 -6.0E-03    7501
+  10595      6.2E+04 1.7E-02     72  1.3E+04           2.8481655E+08    702    702   1002  2.7E+01    7514
+  10695      1.7E+05 4.2E-04     38  3.1E+03           6.7633376E+07    174    174   1023 -6.4E-03    7513
+  10795              1.1E-03     23  3.4E+01  1.0E+03  3.1623072E+06          1024   1023 -2.1E+00    7791         3 9.0E+03
+  10895              2.3E-01     20  2.4E+01  3.4E+02  1.8973505E+06          1056   1036 -3.6E-01    7677         7 2.4E+04
+  10995              4.1E-01     15  1.4E+01  2.6E+02  1.1044160E+06           931    785  1.2E-01    7479        10 8.3E+04
+  11095      1.0E+02 4.7E-02     10  8.4E+00  9.6E+01  4.2673038E+05    895   1054   1036 -7.3E-01    7918        18 5.3E+06
+  11195      4.0E+02 1.0E+00      8  3.6E+00  2.5E-11  1.3841819E+05   1038                           7491        26 1.8E+06
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  11282    17    987 1.3E-01     30  3.3E-04  7.5E-02  1.6107867E+04    7804           28 6.8E+05 1.8E+04 _    i
+  11300    18     18 2.1E-02     33  3.3E-04  2.5E-02  2.1028915E+04    7488           35 1.9E+06 4.9E+04 _    i
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+  11400              4.3E-01     35  5.6E+03           1.2100573E+08          1023        -1.5E-01    8018
+  11500      2.9E+03 2.5E-02     20  3.7E+01  2.9E+03  4.6749973E+06    390   1054   1045  3.7E-01    7832         1 4.5E+02
+  11600              1.0E+00     20  3.9E+01  1.4E-10  2.9157031E+06                                  7686         6 3.2E+05
+  11700      4.3E+03 1.0E+00     17  3.1E+01  2.1E-07  2.3918162E+06   1036                           7963        10 1.1E+05
+  11800      3.5E+02 2.0E-01     18  2.1E+01  2.8E+02  1.4394379E+06    927   1033   1047  4.0E-02    7724        13 3.6E+05
+  11900      1.0E+02 4.2E-01     15  8.9E+00  6.1E+01  4.2947928E+05    895   1051         1.4E+00    6605        17 2.4E+06
+  12000              1.0E+00      9  3.6E+00  2.5E-11  1.4795188E+05                                  7207   1    23 2.0E+06
+  12100      8.6E+00 1.0E+00      4  8.4E-01  2.3E-08  2.7773569E+04    373                           7753   1    29 3.3E+06
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  12121    19    821 2.0E-01     35  3.4E-04  6.1E-02  1.4132467E+04    7493           30 1.3E+07 1.7E+03 _    i
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+  12221      2.1E+04 1.0E+00     11  5.7E+00  4.0E-10  5.0948050E+05   1044                           7242        13 6.0E+05
+  12321              1.0E+00      8  4.1E+00  6.3E-10  2.7922188E+05                                  7472        17 3.9E+05
+  12421              1.0E+00      5  1.5E+00  7.6E-10  7.9534334E+04                                  7777        24 1.4E+06
+  12521              7.0E-01      3  4.2E-01  1.2E+00  1.8326453E+04           463        -7.6E+00    8031        29 6.8E+06
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  12539    20    418 7.1E-02     38  3.3E-04  5.2E-02  1.6818397E+04    7478           32 2.4E+06 4.5E+04 _    i
+  12611    21     72 9.3E-02     40  3.1E-04  3.9E-02  2.0893839E+04    6083           35 1.4E+07 6.3E+04 _    i
+  12650    22     39 7.0E-02     43  3.0E-04  4.0E-02  2.0947714E+04    5541           33 5.1E+05 7.4E+04 _    i
+  12698    23     48 1.7E-01     45  2.9E-04  5.2E-02  2.6789466E+04    6002           38 5.7E+06 2.0E+05 _  R i
+  12702    24      4 4.1E-01     47  3.2E-04  4.7E-02  3.0136630E+04    4624    21     35 5.0E+01 3.6E+05 _s   i
+  12720    25     18 6.8E-01     49  3.3E-04  5.2E-02  2.7538945E+04    5356           34 8.6E+06 2.4E+05 _    i
+  12738    26     18 1.0E+00     50  3.3E-04  4.8E-02  2.5417806E+04    5187           35 6.0E+04 1.2E+04 _    i
+  12744    27      6 5.3E-01     52  2.9E-04  6.8E-02  2.3617318E+04    5349           36 1.0E+07 3.4E+03 _    i
+  12760    28     16 1.0E+00     53  2.5E-04  8.0E-02  2.2581519E+04    5386           37 9.0E+06 2.8E+03 _    i
+  12773    29     13 1.0E+00     54  2.9E-04  6.3E-02  2.2025837E+04    5107    18     33 1.3E+07 2.8E+03 _    i
+  12787    30     14 1.0E+00     55  3.2E-04  3.7E-02  1.9403883E+04    5272           36 3.1E+05 2.8E+03 _    i
+  12813    31     26 4.3E-01     57  3.3E-04  2.9E-02  1.8604619E+04    5101           39 5.3E+04 2.8E+03 _    i
+  12820    32      7 3.2E-01     59  3.3E-04  1.5E-02  1.8036222E+04    4615           37 9.5E+03 2.8E+03 _    i
+  12827    33      7 1.2E-01     63  3.3E-04  1.7E-02  1.7938275E+04    4775           35 4.2E+04 2.8E+03 _    i
+  12840    34     13 1.1E-01     65  3.3E-04  1.9E-02  1.7821108E+04    4859           39 1.3E+05 2.8E+03 _  R i
+  12843    35      3 5.8E-01     67  3.4E-04  1.5E-02  1.7962050E+04    4857           39 1.3E+05 2.0E+04 _s   i
+  12845    36      2 3.4E-01     69  3.5E-04  1.5E-02  1.7963944E+04    4857           38 1.3E+05 1.4E+04 _    i
+  12846    37      1 2.8E-01     71  3.5E-04  2.1E-02  1.7920405E+04    4371     8     38 2.1E+01 5.9E+03 _    i
+  12849    38      3 1.0E+00     72  3.6E-04  1.5E-02  1.7917294E+04    4529           36 1.5E+02 5.9E+03 _    i
+  12852    39      3 1.0E+00     73  3.6E-04  1.8E-02  1.7738872E+04    4611           36 5.8E+03 5.9E+03 _    i
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  12855    40      3 1.0E+00     74  3.6E-04  1.9E-02  1.7580070E+04    4611           38 2.6E+04 5.9E+03 _    i
+  12862    41      7 1.0E+00     75  3.5E-04  2.7E-02  1.7112892E+04    4859           36 3.4E+04 5.9E+03 _    i
+  12866    42      4 1.0E+00     76  3.6E-04  2.9E-02  1.6843675E+04    4693    12     35 1.7E+03 5.9E+03 _    i
+  12868    43      2 1.0E+00     77  3.5E-04  1.5E-02  1.6490054E+04    4691           36 1.0E+04 5.9E+03 _    i
+  12871    44      3 1.0E+00     78  3.5E-04  9.9E-03  1.6317991E+04    4691           34 3.6E+01 5.9E+03 _    i
+  12874    45      3 1.0E+00     79  3.6E-04  6.5E-03  1.6154406E+04    4689     8     36 2.1E+03 5.9E+03 _  R i
+  12876    46      2 1.0E+00     80  3.6E-04  7.6E-03  1.6047145E+04    4771           35 6.0E+03 5.9E+03 _s   i
+  12878    47      2 2.6E-01     82  3.5E-04  6.1E-03  1.6003829E+04    4771           36 4.9E+03 5.9E+03 _    i
+  12882    48      4 1.3E-01     85  3.5E-04  1.0E-02  1.5973505E+04    4771           35 2.7E+02 5.9E+03 _    i
+  12886    49      4 2.2E-01     87  3.6E-04  1.3E-02  1.5910722E+04    4771           36 4.2E+03 5.9E+03 _    i
+  12890    50      4 1.0E+00     88  3.5E-04  1.0E-02  1.5815551E+04    4689    10     35 1.2E+02 7.8E+03 _    i
+  12896    51      6 1.0E+00     89  3.5E-04  2.2E-02  1.5638206E+04    4856     8     34 6.1E+03 6.6E+03 _    i
+  12902    52      6 4.8E-01     91  3.5E-04  2.4E-02  1.5523106E+04    4935           35 4.8E+04 6.6E+03 _    i
+  12904    53      2 1.0E+00     92  3.4E-04  2.1E-02  1.5304632E+04    4935           34 1.8E+04 6.6E+03 _    i
+  12907    54      3 1.0E+00     93  3.4E-04  1.3E-02  1.5145848E+04    4935           34 3.6E+05 6.6E+03 _    i
+  12912    55      5 1.0E+00     94  3.4E-04  1.5E-02  1.4980015E+04    5017           34 1.2E+06 6.6E+03 _    i
+  12917    56      5 1.0E+00     95  3.3E-04  1.7E-02  1.4451989E+04    4697    15     36 7.0E+05 6.6E+03 _  R i
+  12921    57      4 1.0E+00     96  3.3E-04  1.3E-02  1.4002537E+04    4859           35 7.2E+05 6.6E+03 _s   i
+  12924    58      3 4.4E-01     98  3.3E-04  8.4E-03  1.3840969E+04    4859           35 1.6E+06 6.6E+03 _    i
+  12925    59      1 1.0E+00     99  3.3E-04  1.0E-02  1.3782671E+04    4859           35 2.2E+06 6.6E+03 _    i
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  12928    60      3 1.0E+00    100  3.3E-04  2.2E-02  1.3668647E+04    4691    13     35 2.1E+03 6.6E+03 _    i
+  12939    61     11 2.9E-01    102  3.2E-04  7.6E-03  1.3623643E+04    4933           35 4.7E+04 6.6E+03 _    i
+  12941    62      2 4.7E-01    104  3.2E-04  1.2E-02  1.3552569E+04    4692           34 4.2E+01 6.6E+03 _    i
+  12943    63      2 1.0E+00    105  3.2E-04  9.7E-03  1.3516011E+04    4691           35 3.1E+03 6.6E+03 _    i
+  12944    64      1 6.1E-01    107  3.2E-04  8.6E-03  1.3468263E+04    4691           35 2.7E+03 6.6E+03 _    i
+  12945    65      1 6.9E-02    110  3.2E-04  1.2E-02  1.3455098E+04    4691           35 2.6E+03 6.6E+03 _    i
+  12946    66      1 4.7E-01    112  3.2E-04  7.6E-03  1.3426255E+04    4613     5     35 3.0E+01 6.6E+03 _    i
+  12948    67      2 3.2E-01    114  3.2E-04  7.1E-03  1.3420255E+04    4693           34 5.0E+02 6.6E+03 _  R i
+  12950    68      2 3.1E-01    116  3.2E-04  6.8E-03  1.3412703E+04    4694           35 4.7E+04 6.6E+03 _s   i
+  12951    69      1 2.7E-01    118  3.2E-04  6.6E-03  1.3408980E+04    4694           35 6.3E+04 6.6E+03 _    i
+  12952    70      1 1.0E+00    119  3.2E-04  7.3E-03  1.3407366E+04    4694           35 6.4E+04 6.6E+03 _    i
+  12953    71      1 1.0E+00    120  3.2E-04  1.3E-02  1.3399128E+04    4694           35 6.6E+04 6.6E+03 _    i
+  12954    72      1 1.0E+00    121  3.2E-04  7.1E-03  1.3394034E+04    4694           35 7.5E+04 6.6E+03 _    i
+  12955    73      1 1.0E+00    122  3.2E-04  5.6E-03  1.3390138E+04    4694           35 7.8E+04 6.6E+03 _    i
+  12956    74      1 2.7E-01    124  3.2E-04  6.7E-03  1.3389932E+04    4615     5     35 2.6E+01 6.6E+03 _    i
+  12957    75      1 1.0E+00    125  3.2E-04  7.2E-03  1.3388861E+04    4615           35 2.7E+01 6.6E+03 _    i
+  12958    76      1 1.0E+00    126  3.2E-04  6.5E-03  1.3385518E+04    4615           35 3.1E+01 6.6E+03 _    i
+  12959    77      1 2.2E-01    128  3.2E-04  6.8E-03  1.3383508E+04    4615           35 2.9E+01 6.6E+03 _    i
+  12960    78      1 3.3E-01    130  3.2E-04  7.3E-03  1.3382981E+04    4615           35 4.7E+01 6.6E+03 _  R i
+  12961    79      1 2.7E-01    132  3.2E-04  5.6E-03  1.3382727E+04    4615           35 5.1E+01 6.6E+03 _s   i
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  12962    80      1 1.0E+00    133  3.2E-04  6.6E-03  1.3382601E+04    4615           35 4.8E+01 6.6E+03 _    i
+  12963    81      1 3.5E-01    135  3.2E-04  8.0E-03  1.3382339E+04    4615           35 6.3E+01 6.6E+03 _    i
+  12964    82      1 4.2E-01    137  3.2E-04  6.5E-03  1.3382098E+04    4615           35 7.2E+01 6.6E+03 _    i
+  12965    83      1 1.9E-01    139  3.2E-04  1.3E-02  1.3382039E+04    4615           35 8.6E+01 6.6E+03 _    i
+  12966    84      1 6.2E-02    142  3.2E-04  1.5E-02  1.3381997E+04    4615     6     35 2.8E+02 6.6E+03 _    i
+  12967    85      1 1.0E+00    143  3.2E-04  5.9E-03  1.3381867E+04    4615           35 2.9E+02 6.6E+03 _    i
+  12968    86      1 1.0E+00    144  3.2E-04  7.2E-03  1.3381709E+04    4615           35 2.8E+02 6.6E+03 _    i
+  12969    87      1 2.5E-01    146  3.2E-04  8.1E-03  1.3381564E+04    4615           35 2.9E+02 6.6E+03 _    i
+  12970    88      1 4.2E-02    149  3.2E-04  1.5E-02  1.3381545E+04    4615           35 4.1E+02 6.6E+03 _    i
+  12971    89      1 2.5E-01    151  3.2E-04  1.4E-02  1.3381445E+04    4615           35 1.9E+02 6.6E+03 _  R i
+  12972    90      1 2.4E-01    153  3.2E-04  5.6E-03  1.3381399E+04    4615           35 2.0E+02 6.6E+03 _s   i
+  12973    91      1 1.0E+00    154  3.2E-04  5.4E-03  1.3381371E+04    4615           35 1.9E+02 6.6E+03 _    i
+  12974    92      1 2.6E-01    156  3.2E-04  6.7E-03  1.3381348E+04    4615           35 2.6E+02 6.6E+03 _    i
+  12975    93      1 8.0E-02    159  3.2E-04  1.2E-02  1.3381343E+04    4614     8     35 2.7E+02 6.6E+03 _    i
+  12976    94      1 1.0E+00    160  3.2E-04  8.0E-03  1.3381306E+04    4614           35 2.8E+02 6.6E+03 _    i
+  12977    95      1 3.1E-01    162  3.2E-04  1.5E-02  1.3381281E+04    4614           35 2.8E+02 6.6E+03 _    i
+  12978    96      1 3.3E-01    164  3.2E-04  6.0E-03  1.3381274E+04    4614           35 3.3E+02 6.6E+03 _    i
+  12979    97      1 1.0E+00    165  3.2E-04  5.1E-03  1.3381264E+04    4614           35 3.3E+02 6.6E+03 _    i
+  12980    98      1 1.0E+00    166  3.2E-04  4.9E-03  1.3381238E+04    4614           35 3.2E+02 6.6E+03 _    i
+  12981    99      1 2.3E-01    168  3.2E-04  6.2E-03  1.3381233E+04    4614           35 3.4E+02 6.6E+03 _    i
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  12982   100      1 1.0E+00    169  3.2E-04  5.9E-03  1.3381221E+04    4614           35 3.6E+02 6.6E+03 _  R i
+  12983   101      1 3.8E-01    171  3.2E-04  6.1E-03  1.3381218E+04    4614           35 4.0E+02 6.6E+03 _s   i
+  12984   102      1 1.0E+00    172  3.2E-04  8.3E-03  1.3381215E+04    4615     5     35 3.7E+02 6.6E+03 _    i
+  12985   103      1 1.0E+00    173  3.2E-04  5.7E-03  1.3381210E+04    4615           35 3.7E+02 6.6E+03 _    i
+  12986   104      1 1.0E+00    174  3.2E-04  1.3E-02  1.3381206E+04    4615           35 4.4E+02 6.6E+03 _    i
+  12987   105      1 1.0E+00    175  3.2E-04  9.3E-03  1.3381203E+04    4615           35 4.2E+02 6.6E+03 _    i
+  12988   106      1 3.1E-01    177  3.2E-04  6.5E-03  1.3381201E+04    4615           35 4.6E+02 6.6E+03 _    i
+  12989   107      1 1.0E+00    178  3.2E-04  1.2E-02  1.3381200E+04    4615           35 4.8E+02 6.6E+03 _    i
+  12990   108      1 1.0E+00    179  3.2E-04  6.1E-03  1.3381192E+04    4615           35 4.9E+02 6.6E+03 _    i
+  12991   109      1 3.6E-01    181  3.2E-04  6.8E-03  1.3381192E+04    4615           35 5.1E+02 6.6E+03 _    i
+  12992   110      1 1.0E+00    182  3.2E-04  7.1E-03  1.3381184E+04    4615           35 5.2E+02 6.6E+03 _    i
+  12993   111      1 3.6E-01    184  3.2E-04  7.4E-03  1.3381175E+04    4616     4     35 4.3E+02 6.6E+03 _  R i
+  12994   112      1 1.0E+00    185  3.2E-04  4.8E-03  1.3381171E+04    4616           35 6.0E+02 6.6E+03 _s   i
+  12995   113      1 1.0E+00    186  3.2E-04  6.4E-03  1.3381169E+04    4616           35 5.7E+02 6.6E+03 _    i
+  12996   114      1 1.0E+00    187  3.2E-04  5.4E-03  1.3381167E+04    4616           35 6.5E+02 6.6E+03 _    i
+  12997   115      1 1.0E+00    188  3.2E-04  5.9E-03  1.3381165E+04    4616           35 6.8E+02 6.6E+03 _    i
+  12998   116      1 2.0E-01    190  3.2E-04  6.1E-03  1.3381165E+04    4616           35 6.9E+02 6.6E+03 _    i
+  12999   117      1 1.8E-01    192  3.2E-04  6.3E-03  1.3381165E+04    4616           35 8.1E+02 6.6E+03 _    i
+  13000   118      1 1.0E+00    193  3.2E-04  1.5E-02  1.3381165E+04    4616           35 7.8E+02 6.6E+03 _    i
+  13001   119      1 1.0E+00    194  3.2E-04  8.5E-03  1.3381162E+04    4616           35 7.7E+02 6.6E+03 _    i
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  13002   120      1 1.0E+00    195  3.2E-04  6.7E-03  1.3381161E+04    4616           35 8.7E+02 6.6E+03 _    i
+  13003   121      1 1.0E+00    196  3.2E-04  8.3E-03  1.3381160E+04    4612     9     35 5.0E+02 6.6E+03 _    i
+  13004   122      1 1.0E+00    197  3.2E-04  7.2E-03  1.3381157E+04    4612           35 6.2E+02 6.6E+03 _  R i
+  13005   123      1 1.0E+00    198  3.2E-04  4.9E-03  1.3381155E+04    4612           35 6.3E+02 6.6E+03 _s   i
+  13006   124      1 1.0E+00    199  3.2E-04  7.6E-03  1.3381155E+04    4612           35 6.5E+02 6.6E+03 _    i
+  13007   125      1 1.0E+00    200  3.2E-04  5.4E-03  1.3381154E+04    4612           35 6.5E+02 6.6E+03 _    i
+  13008   126      1 1.0E+00    201  3.2E-04  6.8E-03  1.3381154E+04    4612           35 5.2E+02 6.6E+03 _    i
+  13009   127      1 1.0E+00    202  3.2E-04  6.5E-03  1.3381153E+04    4612           35 6.5E+02 6.6E+03 _    i
+  13010   128      1 1.0E+00    203  3.2E-04  7.1E-03  1.3381152E+04    4612           35 6.2E+02 6.6E+03 _    i
+  13011   129      1 1.0E+00    204  3.2E-04  6.4E-03  1.3381151E+04    4612           35 6.6E+02 6.6E+03 _    i
+  13012   130      1 1.0E+00    205  3.2E-04  6.1E-03  1.3381150E+04    4612           35 9.8E+02 6.6E+03 _    i
+  13013   131      1 5.9E-02    208  3.2E-04  6.0E-03  1.3381150E+04    4613     6     35 5.7E+02 6.6E+03 _    i
+  13014   132      1 3.9E-01    210  3.2E-04  8.6E-03  1.3381150E+04    4613           35 6.7E+02 6.6E+03 _    i
+  13015   133      1 1.0E+00    211  3.2E-04  1.4E-02  1.3381147E+04    4613           35 6.8E+02 6.6E+03 _  R i
+  13016   134      1 1.0E+00    212  3.2E-04  5.0E-03  1.3381146E+04    4613           35 6.7E+02 6.6E+03 _s   i
+  13017   135      1 1.0E+00    213  3.2E-04  5.6E-03  1.3381145E+04    4613           35 7.1E+02 6.6E+03 _    i
+  13018   136      1 1.0E+00    214  3.2E-04  6.5E-03  1.3381144E+04    4613           35 6.8E+02 6.6E+03 _    i
+  13019   137      1 1.0E+00    215  3.2E-04  8.0E-03  1.3381144E+04    4613           35 6.9E+02 6.6E+03 _    i
+  13020   138      1 2.3E-01    217  3.2E-04  1.2E-02  1.3381143E+04    4613           35 6.9E+02 6.6E+03 _    i
+  13021   139      1 1.0E+00    218  3.2E-04  1.4E-02  1.3381143E+04    4613           35 7.4E+02 6.6E+03 _    i
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  13022   140      1 1.0E+00    219  3.2E-04  5.5E-03  1.3381142E+04    4613           35 7.9E+02 6.6E+03 _    i
+  13023   141      1 1.0E+00    220  3.2E-04  6.4E-03  1.3381141E+04    4613     5     35 2.4E+03 6.6E+03 _    i
+  13024   142      1 1.0E+00    221  3.2E-04  6.8E-03  1.3381140E+04    4613           35 2.6E+03 6.6E+03 _    i
+  13025   143      1 1.0E+00    222  3.2E-04  1.0E-02  1.3381139E+04    4613           35 4.0E+03 6.6E+03 _    i
+  13026   144      1 1.0E+00    223  3.2E-04  6.9E-03  1.3381135E+04    4613           35 1.6E+03 6.6E+03 _  R i
+  13027   145      1 1.0E+00    224  3.2E-04  6.3E-03  1.3381134E+04    4613           35 1.6E+03 6.6E+03 _s   i
+  13028   146      1 1.0E+00    225  3.2E-04  6.4E-03  1.3381132E+04    4613           35 1.7E+03 6.6E+03 _    i
+  13029   147      1 4.1E-01    227  3.2E-04  5.9E-03  1.3381131E+04    4613           35 1.7E+03 6.6E+03 _    i
+  13030   148      1 1.0E+00    228  3.2E-04  1.2E-02  1.3381131E+04    4613           35 1.7E+03 6.6E+03 _    i
+  13031   149      1 1.0E+00    229  3.2E-04  5.5E-03  1.3381130E+04    4613           35 1.9E+03 6.6E+03 _    i
+  13032   150      1 1.0E+00    230  3.2E-04  7.2E-03  1.3381129E+04    4613           35 1.8E+03 6.6E+03 _    i
+  13033   151      1 1.0E+00    231  3.2E-04  4.8E-03  1.3381129E+04    4613     3     35 2.6E+03 6.6E+03 _    i
+  13035   152      2 1.0E+00    232  3.2E-04  3.6E-02  1.3381128E+04    4613           36 1.5E+04 6.6E+03 _    i
+  13037   153      2 9.4E-02    234  3.2E-04  8.2E-03  1.3381127E+04    4613           35 2.6E+03 6.6E+03 _    i
+  13038   154      1 1.0E+00    235  3.2E-04  8.2E-03  1.3381123E+04    4613           35 3.9E+03 6.6E+03 _    i
+  13039   155      1 8.2E-02    237  3.2E-04  6.7E-03  1.3381122E+04    4613           35 2.0E+03 6.6E+03 _  R i
+  13040   156      1 1.0E+00    238  3.2E-04  8.4E-03  1.3381121E+04    4613           35 2.1E+03 6.6E+03 _s   i
+  13041   157      1 1.0E+00    239  3.2E-04  5.7E-03  1.3381120E+04    4613           35 2.2E+03 6.6E+03 _    i
+  13042   158      1 3.1E-02    242  3.2E-04  9.2E-03  1.3381120E+04    4613           35 4.2E+04 6.6E+03 _    i
+  13044   159      2 3.6E-03    252  3.2E-04  9.3E-03  1.3381120E+04    4613           35 2.0E+06 6.6E+03 _    i
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  13045   160      1 9.0E-07    262  3.2E-04  7.3E-03  1.3381120E+04    4613           35 2.0E+06 6.6E+03 _    i
+  13046   161      1 1.6E-07    272  3.2E-04  7.3E-03  1.3381120E+04    4614     7     35 4.9E+05 6.6E+03 _    i
+  13047   162      1 2.3E-08    282  3.2E-04  7.3E-03  1.3381120E+04    4614           35 4.9E+05 6.6E+03 _    i
+  13048   163      1 2.6E-09    292  3.2E-04  7.3E-03  1.3381120E+04    4614           35 4.9E+05 6.6E+03 _    i
+  13049   164      1 1.9E-10    302  3.2E-04  7.3E-03  1.3381120E+04    4614           35 4.9E+05 6.6E+03 _    i
+  13050   165      1 1.1E-10    312  3.2E-04  7.3E-03  1.3381120E+04    4614           35 4.9E+05 6.6E+03 _    i
+  13052   166      2 4.5E-11    321  3.2E-04  5.8E-03  1.3381120E+04    4614           35 6.0E+03 6.6E+03 _  R i
+  13055   167      3 7.8E-08    331  3.2E-04  1.9E-02  1.3381120E+04    4694           35 1.4E+05 6.6E+03 _sM  i
+  13060   168      5 3.0E-02    341  3.2E-04  6.6E-03  1.3379684E+04    4698     6     35 1.5E+03 6.6E+03 _    i
+  13062   169      2 6.9E-03    351  3.2E-04  7.4E-03  1.3380031E+04    4698           35 1.5E+03 1.1E+04 _    i
+  13064   170      2 9.9E-05    361  3.2E-04  7.5E-03  1.3380031E+04    4698           35 1.7E+03 1.1E+04 _    i
+  13066   171      2 1.7E-06    371  3.2E-04  7.9E-03  1.3380031E+04    4698           35 1.7E+03 1.1E+04 _    i
+  13068   172      2 2.1E-07    381  3.2E-04  7.8E-03  1.3380031E+04    4698           35 1.7E+03 1.1E+04 _    i
+  13070   173      2 3.8E-07    391  3.2E-04  7.8E-03  1.3380031E+04    4698           35 1.7E+03 1.1E+04 _    i
+  13073   174      3 1.3E-08    401  3.2E-04  1.4E-02  1.3380031E+04    4616     8     36 8.2E+04 1.1E+04 _    i
+  13076   175      3 8.7E-08    411  3.2E-04  7.0E-03  1.3380031E+04    4616           35 7.7E+03 1.1E+04 _    i
+  13078   176      2 3.5E-10    420  3.2E-04  9.0E-03  1.3380031E+04    4616           35 6.1E+03 1.1E+04 _    i
+  13079   177      1 3.0E-05    430  3.2E-04  2.5E-02  1.3380030E+04    4616           35 1.9E+04 1.1E+04 _  R i
+  13080   178      1 5.9E-02    432  3.2E-04  2.9E-02  1.3380119E+04    4616           35 2.1E+04 2.6E+04 _s   i
+  13082   179      2 1.1E-01    434  3.2E-04  1.3E-02  1.3380119E+04    4616           36 2.0E+05 1.4E+05 _    i
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  13084   180      2 2.9E-02    444  3.2E-04  1.6E-02  1.3380069E+04    4616           35 1.8E+04 3.1E+04 _    i
+  13085   181      1 2.0E-01    446  3.2E-04  1.1E-02  1.3379819E+04    4616           35 2.2E+04 3.1E+04 _    i
+  13086   182      1 1.7E-02    451  3.2E-04  7.7E-03  1.3379802E+04    4616           35 2.1E+04 3.1E+04 _    i
+  13088   183      2 1.8E-02    456  3.2E-04  2.0E-02  1.3379788E+04    4617     6     36 4.3E+05 3.1E+04 _    i
+  13090   184      2 9.1E-02    466  3.2E-04  8.0E-03  1.3379764E+04    4619           35 1.1E+04 3.4E+04 _    i
+  13091   185      1 6.9E-04    476  3.2E-04  1.7E-02  1.3379763E+04    4619           35 1.3E+04 3.4E+04 _    i
+  13092   186      1 4.9E-05    486  3.2E-04  7.0E-03  1.3379763E+04    4619           35 1.3E+04 3.4E+04 _    i
+  13093   187      1 1.1E-06    496  3.2E-04  7.6E-03  1.3379763E+04    4619           35 1.3E+04 3.4E+04 _    i
+  13094   188      1 7.3E-08    506  3.2E-04  5.0E-02  1.3379763E+04    4619           35 8.8E+03 3.4E+04 _  R i
+  13095   189      1 1.7E-07    513  3.2E-04  7.8E-03  1.3379789E+04    4619           35 6.6E+03 1.2E+06 _s   i
+  13096   190      1 9.6E-09    521  3.2E-04  1.3E-02  1.3379777E+04    4619           35 6.1E+03 1.5E+05 _    i
 
          ==============================
          S N O P T  7.2-12.3 (Aug 2014)
@@ -584,11 +820,14 @@
       snopt-print.out
  XXX  Keyword not recognized:         SNOPT-PRINT.OUT
       Derivative option               1
+      Superbasics limit            1000
       Verify level              -1
+      Minor iteration limit         1000000
       snopt-summary.out
  XXX  Keyword not recognized:         SNOPT-SUMMARY.OU
       Major optimality tolerance  1.30000000E-04
       Major iteration limit         1000000
+      Iteration limit         1000000
 1
  
  SNMEMA EXIT 100 -- finished successfully
@@ -616,7 +855,7 @@
  QP subproblems
  --------------
  QPsolver Cholesky......
- Scale tolerance........     0.900       Minor feasibility tol..  1.00E-06       Iteration limit........     10000
+ Scale tolerance........     0.900       Minor feasibility tol..  1.00E-06       Iteration limit........   1000000
  Scale option...........         0       Minor optimality  tol..  1.00E-06       Minor print level......         1
  Crash tolerance........     0.100       Pivot tolerance........  3.25E-11       Partial price..........         1
  Crash option...........         3       Elastic weight.........  1.00E+04       Prtl price section ( A)        80
@@ -630,7 +869,7 @@
  Unbounded objective....  1.00E+15       Reduced Hessian dim....        80       Central difference int.  6.70E-05
  Major step limit.......  2.00E+00       Derivative linesearch..                 Derivative option......         1
  Major iterations limit.   1000000       Linesearch tolerance...   0.90000       Verify level...........        -1
- Minor iterations limit.       500       Penalty parameter......  0.00E+00       Major Print Level......         1
+ Minor iterations limit.   1000000       Penalty parameter......  0.00E+00       Major Print Level......         1
                                          Major optimality tol...  1.30E-04
 
  Hessian Approximation
@@ -679,225 +918,297 @@
  
 
     Itn       LPmult  LPstep   nInf   SumInf             LPobjective   +SBS   -SBS    -BS    Pivot     L+U ncp
-    100      3.2E-04 3.3E+05      5  1.8E+00                            952    952    300  4.8E-02    7307
-    200      4.9E-02 9.8E-01      1  7.7E-02                           1030   1030   1032  2.3E+00    7334
+    100      2.8E+00 6.5E-02      8  1.6E+01                           1055   1055   1024  3.8E-01    7299
+    200      1.5E+04 1.4E-05      5  1.1E+01           2.1106303E+05   1036   1036    949  3.0E+03    7294
+    300     -2.5E+02 1.2E-04      5  7.3E+00           1.4639189E+05   1036   1036   1058  2.1E+01    7366
  
 
    Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-    217     0    217              1  2.8E-04  2.2E-02 -1.1290611E+01    7526                              _  r
-    266     1     49 7.0E-03      2  2.8E-04  1.2E-02  2.2843508E+04    7409                      7.0E+02 _n rli
+    302     0    302              1  1.9E-03  9.8E-01  6.5599394E+05    7381                              _  r i
 
     Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
-    366     -3.4E+05 1.0E+00     15  9.9E+00  1.3E-09  5.3647561E+05   1037                           7898         1 8.8E+07
-    466      1.2E+02 6.5E-02     16  5.7E+00  1.2E+02  2.9026857E+05    248   1040         1.6E+00    7664         6 2.2E+07
-    566              1.0E+00      7  2.5E+00  1.2E-10  9.3764163E+04                                  7449         7 8.5E+06
+    402              1.0E+00     17  1.7E+01  3.0E-09  1.0305605E+06                                  8018        11 4.1E+05
+    502     -9.2E+03 1.0E+00     18  1.9E+01  8.7E-10  5.0099843E+05   1047                           7647   1     8 4.4E+06
 
    Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-    645     2    379 6.6E-03      3  2.8E-04  5.2E-02  2.2654218E+04    7815           11 8.7E+03 5.1E+01 _s  li
+    594     1    292 7.8E-03      2  1.9E-03  1.0E+00  6.5170480E+05    7854           18 4.8E+05         _n rli
 
     Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
-    745      7.3E+05 1.1E-05    133  1.2E+05           2.4792885E+09    390    390    281  2.9E-01    7704
-    845      2.4E+05 1.8E-04     96  2.5E+04           5.0104456E+08    160    160    627  9.2E-01    7396
-    945      4.4E+07 2.2E-03     55  6.9E+03           1.4021068E+08   1058   1058   1024  8.4E-01    7396
-   1045      5.1E+04 2.0E-03     16  1.6E+02           3.7518506E+06    556    556   1037 -1.3E-03    7428
-   1145              5.8E-01     15  5.0E+00  3.4E+01  2.0519584E+05          1061        -1.4E-02    7946         5 6.9E+06
+    694              1.0E+00      4  8.1E+00  1.7E-10  2.2430743E+05                                  7504         5 2.0E+06
+    794      1.4E+03 1.0E+00      1  3.9E+00  1.2E-09  1.2262768E+05   1053                           7991         3 5.7E+06
 
    Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-   1187     3    542 9.1E-02      8  2.7E-04  8.5E-01  4.5852429E+04    7497            6 2.2E+02 2.0E+05 _ m  it
+    834     2    240 3.1E-02      4  2.0E-03  1.0E+00  6.4286935E+05    7486    18      5 1.2E+06         _sm li
 
     Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
-   1287      8.3E+01 2.1E-02     18  3.3E+00  8.1E+01  9.7427538E+04    514   1023        -1.4E-01    7910         7 2.2E+07
-   1387      1.1E+04 3.7E-01     15  1.9E+00  7.0E+03  4.6929735E+04   1054   1023   1056 -8.7E-02    7350        11 6.2E+06
-   1487     -7.7E+01 1.0E+00     11  1.1E+00  3.0E-09  3.2209015E+04   1059                           7779        20 1.5E+08
+    934              1.0E+00     35  1.8E+03  2.5E-11  3.5722895E+07                                  7656         1 6.3E+04
+   1034              1.0E+00     29  8.2E+01  1.2E-09  1.6526095E+06                                  7582         1 1.6E+07
+   1134      2.3E+02 9.8E-06     21  4.3E+01  2.3E+02  8.5515509E+05    324   1030        -1.1E+04    7711         1 1.3E+02
+   1234      9.4E+03 3.6E-05     18  3.2E+01  6.4E+02  6.4054957E+05   1039   1039    408  1.8E+02    7672         1 2.9E+07
+   1334              1.0E+00     11  1.8E+01  6.6E-10  3.5630016E+05                                  7644         1 4.2E+03
+   1434      6.2E+03 9.9E-06      7  1.0E+01  1.6E+01  2.0696230E+05   1052   1052   1051  2.1E+00    7736         1 4.5E+01
+   1534              1.0E+00      5  6.9E+00  4.4E-14  1.3868134E+05                                  7839         1 9.6E+01
+   1634              1.0E+00      4  3.3E+00  1.9E-12  6.5608299E+04                                  7775         1 3.1E+02
+   1734              1.0E+00      3  2.4E-01  4.5E-12  5.2656613E+03                                  7684         1 2.8E+01
+   1834              1.0E+00                  1.2E-15  3.0776134E+01                                  7668         1 3.2E+00
+   1934      1.2E-01 1.0E+00                  2.6E-10  1.9802177E+01   1054                           7512         8 7.9E+04
 
    Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-   1524     4    337 3.1E-01     10  3.2E-04  4.4E-01 -4.3851181E+05    7817           22 5.6E+03 1.8E+03 _    i
-   1529     5      5 9.4E-04     21  3.2E-04  2.8E-01 -3.5983209E+06    7432           26 2.2E+07 1.7E+03 _n   i
+   1981     3   1147 1.0E+00      6  3.1E-03  2.3E+03  1.3020970E+05    7616     5      7 2.6E+06         _sM
 
     Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
-   1629     -2.1E+09 2.8E-06    129  7.7E+04           1.5507649E+09   1059   1059     82 -2.4E+03    7453
-   1729     -4.3E+05 2.6E-04     98  2.5E+04           5.0687832E+08    648    648   1055  6.8E-04    7455
-   1829      6.7E+04 4.2E-05     82  1.3E+04           2.7083265E+08    615    615   1044 -1.1E-03    7452
-   1929      8.9E+06 9.0E-03     33  2.2E+03           4.5552587E+07   1057   1057    390 -1.7E+03    7464
-   2029              4.0E-01     17  5.1E+00           2.3675276E+05          1055   1035 -9.2E-02    7779
-   2129              1.0E+00      8  1.4E+00  2.3E-12  4.6154097E+04                                  7812         7 7.4E+02
+   2081              1.0E+00     31  4.9E+03  2.9E-10  9.7360438E+07                                  7713         1 4.4E+06
+   2181     -1.1E+06 1.8E-01     28  8.5E+02           1.7697728E+07   1028   1028    741  7.4E+01    7496
+   2281              1.0E+00     14  2.7E+01  1.8E-10  5.4043754E+05                                  7610         1 1.8E+03
+   2381              1.0E+00      9  8.4E+00           1.6875732E+05                                  7522         1 1.4E+02
+   2481      2.1E+02 5.1E-02                  8.6E-01  4.0274275E+02   1057   1057   1059 -1.7E+01    7511         1 2.1E+02
+   2581      1.9E-01 1.8E-02                  1.8E-01  2.5928487E+02    831    937   1023  7.1E-02    7547         1 1.3E+01
+   2681              1.0E+00                  1.6E-16  1.6024893E+02                                  7496         1 7.7E+01
+   2781              1.0E+00                  1.0E-15  9.8489231E+01                                  7951         2 1.4E+01
+   2881              1.0E+00                  5.2E-12  6.6648978E+01                                  7661         3 3.1E+05
+   2981      8.5E-02 1.0E+00                  1.6E-06  4.4312984E+01   1025                           7856         7 8.1E+06
 
    Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-   2144     6    615 5.9E-01     24  3.3E-04  6.7E-01 -1.1678779E+05    7951           14 5.6E+02 8.0E+02 _    it
+   3059     4   1078 1.0E+00      7  3.1E-03  2.0E-01  3.8618830E+01    7677            8 3.8E+05         _
 
     Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
-   2244     -9.6E+08 1.6E-03     55  1.2E+04           2.3451031E+08   1053   1053    690  1.2E+04    7947
-   2344      4.2E+03 5.7E-03     22  4.9E+02           1.1625132E+07    923    923    704             7454
-   2444              6.9E-01     21  7.9E+00  2.5E+01  3.4933262E+05             1   1023  7.8E-02    7141         5 8.7E+02
-   2544      6.8E+03 1.0E+00     13  4.1E+00  4.4E-09  1.2908137E+05   1061                           7771   1     7 4.4E+06
-   2644      2.6E+01 1.5E-02     13  2.5E+00  2.6E+01  6.3402919E+04    937   1047        -1.5E-01    6795        12 3.1E+07
-   2744              1.0E+00      4  4.7E-01  1.3E-09  1.8281479E+04                                  7852   1    13 3.8E+03
+   3159      3.3E+06 9.7E-04    194  4.1E+05           8.5460374E+09    686    686    960 -6.4E+00    7487
+   3259      2.2E+06 1.5E-02    196  1.8E+05           3.6847201E+09    591    591    313 -4.0E-01    7488
+   3359     -1.1E+05 6.1E-06    193  5.5E+04           1.1013420E+09    322    322    654             7369         1 2.3E+04
+   3459      2.2E+05 3.4E-09    178  3.5E+04  1.8E-11  7.0416483E+08    453    453    264 -1.0E+00    7536         1 4.6E+02
+   3559              1.0E+00    116  2.1E+04  3.6E-12  4.2632265E+08                                  7450         1 4.6E+02
+   3659              1.0E+00     80  1.3E+04  4.9E-11  2.5589702E+08                                  7480         1 1.7E+05
+   3759      1.7E+04 2.1E-03     47  4.9E+03           9.9512317E+07    245    245    644 -7.9E-01    7488
+   3859      1.2E+04 5.9E-07     25  8.7E+02  1.2E+04  1.8579863E+07    450    766   1022  3.6E-04    7725         1 4.5E+04
+   3959              1.0E+00     12  4.0E+01  1.2E-12  8.0370291E+05                                  7744         1 1.7E+04
+   4059      2.0E+02 1.3E-02     11  2.0E+01  1.1E+00  3.9344390E+05   1027   1027    407  2.0E+02    7903         1 7.6E+03
+   4159              1.0E+00      7  1.2E+01  1.1E-10  2.4162161E+05                                  7878         1 2.6E+07
+   4259      1.0E+01 2.4E-03      1  2.5E-01  6.1E+01  5.4458159E+03   1016   1016    450  2.5E-01    7980         1 1.5E+06
+   4359      4.3E+00 3.7E-01                  7.6E-02  5.9918268E+01   1045   1045   1049 -4.5E-01    7756         1 8.8E+01
+   4459      2.0E-01 1.0E+00                  1.3E-09  4.1880141E+01   1023                           7217         6 5.4E+05
+   4559              1.0E+00                  4.1E-14  1.2214351E+01                                  7648         6 1.4E+07
+   4659              4.0E-02                  1.3E-03 -9.3696121E-01           671        -5.6E+01    8016         9 3.1E+05
 
    Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-   2756     7    612 1.0E+00     25  2.9E-04  1.0E+00 -4.3771488E+05    7852           19 5.7E+07 1.6E+03 _    it
+   4704     5   1645 1.2E-01      9  2.7E-03  8.5E-02  4.4061602E+01    8035           14 9.6E+04 9.6E-04 _
 
     Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
-   2856     -7.5E+03 1.0E+00     14  1.4E+00  7.7E-08  4.7494764E+04   1024                           7833   2     7 2.8E+07
-   2956              1.0E+00      4  4.0E-01  3.5E-08  1.4970070E+04                                  7588        13 2.6E+08
+   4804              1.0E+00     15  4.4E+02  2.5E-11  8.8107296E+06                                  7699         1 1.5E+07
+   4904      9.6E+02 4.1E-05     16  4.7E+01  9.6E+02  9.4130450E+05    767    209    777  3.2E-01    7850         1 5.4E+02
+   5004              1.0E+00     10  1.5E+01  7.7E-11  2.9331874E+05                                  7768         1 1.8E+06
+   5104              9.4E-01      6  9.0E+00           1.8188159E+05          1049   1034 -4.6E-01    7761
+   5204     -1.9E+04 1.1E-02      6  5.7E+00           1.1632595E+05   1058   1058   1033 -1.6E+00    7699
+   5304              1.0E+00      2  3.3E+00  1.2E-11  6.5704786E+04                                  7713         1 5.6E+02
+   5404              1.0E+00      3  1.7E+00  2.7E-11  3.4178715E+04                                  7678         1 1.0E+02
+   5504      1.7E+01 1.0E+00                  4.3E-08  5.6464130E+02   1039                           7731         2 4.0E+01
+   5604      4.6E-01 2.9E-01                  3.3E-01  4.5080045E+02    706    767    504 -1.9E-02    7584         1 6.6E+02
+   5704              1.0E+00                  2.2E-16  3.3490739E+02                                  7469         1 6.1E+03
+   5804              1.0E+00                  1.8E-14  2.3794470E+02                                  7956         2 1.0E+01
+   5904      2.3E+00 1.0E+00                  3.6E-08  1.3411051E+02   1046                           7836         4 1.3E+02
+   6004              1.0E+00                  6.2E-09  5.1552548E+01                                  7553         2 4.4E+02
+   6104              1.0E+00                  4.8E-10  2.9074180E+01                                  7763        14 1.4E+08
 
    Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-   3038     8    282 7.2E-02     28  2.8E-04  2.7E-01 -5.8766086E+05    7786           22 1.8E+04 5.0E+03 _    i
+   6105     6   1401 1.0E+00     10  2.2E-03  9.4E-02  7.3533158E+00    7763           14 1.4E+08 9.6E-04 _
 
     Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
-   3138     -1.7E+05 1.6E-03     55  9.2E+03           1.8613830E+08    694    694    754  1.4E+00    7867
-   3238     -8.7E+05 5.4E-02     27  5.2E+02           1.1687565E+07   1036   1036   1030 -5.3E-01    7767
-   3338     -8.4E+03 3.4E-01     22  8.4E+00  5.6E+03  5.1999504E+05   1039     70    785  1.1E+01    7285         5 1.5E+04
-   3438              1.7E-01     17  6.5E+00  1.6E+02  3.3242362E+05          1040   1057 -6.7E-02    7634         6 1.6E+05
-   3538      1.4E+04 6.6E-01     17  3.1E+00  4.6E+03  1.1964685E+05   1040   1042   1046  6.6E-01    7538   1     7 3.9E+06
-   3638      1.9E+04 1.8E-01      6  6.3E-01  4.9E+01  2.6922458E+04   1034   1034   1054  1.6E+00    7534         8 6.8E+03
+   6205      1.1E+06 8.8E-01     22  3.2E+02           6.3292381E+06   1053   1053    302  1.5E+02    7939
+   6305     -8.2E+03 3.8E-04     15  3.2E+01  6.0E+01  6.3837667E+05   1032   1032   1031             7492         1 4.3E+01
+   6405      2.6E+04 2.3E-03     15  2.6E+01  5.9E+02  5.1569339E+05   1029   1029    870  5.9E+03    7995         1 2.0E+06
+   6505     -2.2E+04 6.7E-04     15  1.9E+01  5.1E+02  3.8557497E+05   1033   1033   1031  5.1E-01    7943         1 1.9E+03
+   6605      5.3E+03 2.6E-03      9  1.5E+01  4.9E+02  3.0234549E+05   1029   1029    174 -1.2E+01    7844         1 8.5E+04
+   6705      2.1E+04 2.6E-04      8  6.1E+00  3.3E+01  1.2411045E+05   1050   1050    408 -1.2E+03    7840         1 3.5E+00
+   6805      1.4E+02 3.5E-04      7  3.6E+00  1.4E+02  7.2793991E+04    748   1044        -1.6E+02    7871         1 1.0E+03
+   6905              1.0E+00      5  1.6E+00  5.5E-11  3.2365049E+04                                  7782         1 6.6E+05
+   7005              1.0E+00                  4.3E-15  8.1210582E+02                                  7803         1 3.2E+02
+   7105              6.7E-02                  3.2E-01  1.8383080E+02           140   1054  1.8E-02    7771         1 1.1E+01
+   7205              1.0E+00                  8.9E-16  3.9957536E+01                                  7619         5 2.2E+03
 
    Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-   3686     9    648 1.0E+00     29  1.8E-04  7.1E-01  7.3781372E+03    7637           20 1.2E+05 6.7E+03 _    it
-   3785    10     99 3.9E-01     31  1.4E-04  1.7E-01 -5.7878734E+04    7006    20     32 3.9E+08 4.4E+03 _
+   7245     7   1140 9.9E-02     13  2.0E-03  6.5E-02  1.8820564E+01    7695           10 2.7E+08 1.1E-02 _
 
     Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
-   3885      1.4E+05 1.0E+00     31  2.2E+03  3.4E-11  4.6910620E+07   1042                           7470         1 9.3E+04
-   3985              1.0E+00     16  6.6E+00  1.1E-11  5.2020810E+05                                  7671         1 2.7E+02
-   4085              1.0E+00     18  6.1E+00  1.5E-10  2.5924206E+05                                  7893        11 8.4E+05
-   4185              1.0E+00     13  3.3E+00  3.6E-07  1.0128116E+05                                  7639   1    12 5.2E+05
-   4285              1.0E+00      7  7.4E-01  9.8E-11  3.4405799E+04                                  7023        17 3.6E+07
-   4385              1.0E+00      1  1.3E-02  1.3E-10  2.8286274E+03                                  7837   1    21 3.7E+04
+   7345      1.5E+06 3.2E-06     22  7.5E+02  1.4E+04  1.5089490E+07   1026   1026   1050  6.4E-01    7750         1 2.8E+05
+   7445              2.2E-01     12  2.7E+01           5.6052945E+05           430   1036 -6.4E-03    7861
+   7545              1.0E+00      7  1.1E+01  1.8E-10  2.3149154E+05                                  7919         1 3.2E+03
+   7645              1.0E+00      5  6.9E+00  2.2E-13  1.3852351E+05                                  7749         1 9.9E+00
+   7745      1.2E+04 7.2E-04      2  3.9E+00  4.2E-01  7.8043614E+04   1037   1037   1032  7.1E+00    7803         1 3.6E+01
+   7845      3.8E+03 7.0E-05      1  9.7E-01  5.0E+01  1.9842657E+04   1036   1036   1045 -1.3E-01    7790         1 1.4E+02
+   7945              1.0E+00                  2.7E-11  6.9283774E+01                                  7740         2 3.5E+00
+   8045      3.8E+00 1.0E+00                  1.2E-10  3.2106422E+01   1045                           7542         5 1.2E+05
 
    Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-   4402    11    617 3.1E-01     34  1.1E-04  2.4E-01 -1.1278293E+04    7935           24 5.3E+03 1.0E+03 _     t
-   4462    12     60 2.3E-01     36  8.6E-05  1.3E-02 -1.4699630E+03    7584           33 2.6E+08 1.0E+03 _
-   4496    13     34 1.5E-01     39  7.5E-05  1.7E-02  5.9431153E+02    5351           42 7.4E+08 1.5E+03 _  R i
-   4509    14     13 7.8E-01     41  6.5E-05  1.2E-02  2.8947421E+03    4863           34 5.7E+05 4.1E+03 _s   i
-   4521    15     12 1.0E+00     42  2.0E-05  7.8E-03  8.2796273E+02    4845           39 9.1E+07 7.8E+02 _
-   4560    16     39 1.0E+00     43  5.7E-05  1.3E-02  2.1129858E+02    5432           41 3.0E+08 7.8E+02 _
-   4566    17      6 1.0E+00     44  8.6E-06  1.4E-02  7.5312613E+01    4210    19     44 4.9E+03 1.7E+03 _
-   4577    18     11 1.0E+00     45  3.4E-06  1.3E-02 -9.6747063E+00    4292           52 1.2E+07 1.1E+03 _
-   4589    19     12 1.0E+00     46 (3.2E-08) 1.2E-02 -1.0859467E+01    4291           61 3.1E+07 1.1E+03 _
+   8132     8    887 5.2E-02     16  1.9E-03  3.3E-02  2.7387335E+01    7769           13 1.8E+08 3.0E-01 _
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   8232              1.0E+00                  1.7E-09  2.2352585E+01                                  7692   1    10 2.2E+06
 
    Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-   4607    20     18 1.0E+00     47 (2.0E-11) 2.3E-03 -1.0873121E+01    3806           46 1.9E+03 1.1E+03 _s
+   8245     9    113 1.6E-03     18  1.9E-03  8.0E-02  2.7677733E+01    7772    13     10 5.4E+06 3.3E-01 _
 
-         ==============================
-         S N O P T  7.2-12.3 (Aug 2014)
-         ==============================
-      snopt-print.out
- XXX  Keyword not recognized:         SNOPT-PRINT.OUT
-      Derivative option               1
-      Verify level              -1
-      snopt-summary.out
- XXX  Keyword not recognized:         SNOPT-SUMMARY.OU
-      Major optimality tolerance  1.30000000E-04
-      Major iteration limit         1000000
-1
- 
- SNMEMA EXIT 100 -- finished successfully
- SNMEMA INFO 104 -- memory requirements estimated
-      Total character workspace             500
-      Total integer   workspace         1298225
-      Total real      workspace          993575
-1
- 
- Parameters
- ==========
-
- Files
- -----
- Solution file..........         0       Old basis file ........         0       Standard input.........         5
- Insert file............         0       New basis file ........         0       (Printer)..............        18
- Punch file.............         0       Backup basis file......         0       (Specs file)...........         0
- Load file..............         0       Dump file..............         0       Standard output........         6
-
- Frequencies
- -----------
- Print frequency........       100       Check frequency........        60       Save new basis map.....       100
- Summary frequency......       100       Factorization frequency        50       Expand frequency.......     10000
-
- QP subproblems
- --------------
- QPsolver Cholesky......
- Scale tolerance........     0.900       Minor feasibility tol..  1.00E-06       Iteration limit........     10000
- Scale option...........         0       Minor optimality  tol..  1.00E-06       Minor print level......         1
- Crash tolerance........     0.100       Pivot tolerance........  3.25E-11       Partial price..........         1
- Crash option...........         3       Elastic weight.........  1.00E+04       Prtl price section ( A)        80
-                                         New superbasics........        99       Prtl price section (-I)       981
-
- The SQP Method
- --------------
- Minimize...............                 Cold start.............                 Proximal Point method..         1
- Nonlinear objectiv vars        80       Objective Row..........         1       Function precision.....  3.00E-13
- Unbounded step size....  1.00E+20       Superbasics limit......        80       Difference interval....  5.48E-07
- Unbounded objective....  1.00E+15       Reduced Hessian dim....        80       Central difference int.  6.70E-05
- Major step limit.......  2.00E+00       Derivative linesearch..                 Derivative option......         1
- Major iterations limit.   1000000       Linesearch tolerance...   0.90000       Verify level...........        -1
- Minor iterations limit.       500       Penalty parameter......  0.00E+00       Major Print Level......         1
-                                         Major optimality tol...  1.30E-04
-
- Hessian Approximation
- ---------------------
- Limited-Memory Hessian.                 Hessian updates........        10       Hessian frequency......  99999999
-                                                                                 Hessian flush..........  99999999
-
- Nonlinear constraints
- ---------------------
- Nonlinear constraints..       980       Major feasibility tol..  1.00E-06       Violation limit........  1.00E+06
- Nonlinear Jacobian vars        80
-
- Miscellaneous
- -------------
- LU factor tolerance....      3.99       LU singularity tol.....  3.25E-11       Timing level...........         3
- LU update tolerance....      3.99       LU swap tolerance......  1.22E-04       Debug level............         0
- LU partial  pivoting...                 eps (machine precision)  2.22E-16       System information.....        No
-                                                                                 Sticky parameters......        No
-1
- 
-
- 
-
- Matrix statistics
- -----------------
-               Total      Normal        Free       Fixed     Bounded
- Rows            981         980           1           0           0
- Columns          80           0           0           0          80
-
- No. of matrix elements                78400     Density      99.898
- Biggest  constant element        0.0000E+00  (excluding fixed columns,
- Smallest constant element        0.0000E+00   free rows, and RHS)
-
- No. of objective coefficients             0
-
- Nonlinear constraints     980     Linear constraints       1
- Nonlinear variables        80     Linear variables         0
- Jacobian  variables        80     Objective variables     80
- Total constraints         981     Total variables         80
-1
- 
-
- 
- The user has defined   78480   out of   78480   first  derivatives
-1
- 
-
-    Itn       QPmult  QPstep   nInf   SumInf   rgNorm    QPobjective   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
-    100     -3.0E-01 1.0E+00                  3.0E-16 -5.9617856E+00     80                           5597         1 1.1E+00
- 
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   8345              4.9E-01     23  1.6E+03           3.1201785E+07           113   1035 -2.3E-01    7669
+   8445      4.3E+05 8.0E-06     22  2.9E+01  1.3E-07  5.7548334E+05    280    280    419 -2.1E+01    7687         1 4.2E+09
+   8545              1.0E+00      8  9.2E+00  2.1E-12  1.8586356E+05                                  7723         1 4.4E+04
+   8645      2.7E+04 2.1E-04      5  5.2E+00  2.1E+02  1.0634921E+05   1054   1054   1060  4.8E+00    7633         1 1.8E+02
+   8745      5.7E+03 3.7E-05      2  1.9E+00  5.7E+03  3.8699786E+04   1043   1054        -1.1E+01    7678         1 1.7E+06
+   8845      1.1E+03 2.7E-03      1  2.2E-01  6.4E+00  5.4481165E+03   1061   1061   1027  1.0E+00    7635         1 2.3E+03
+   8945              1.0E+00                  6.9E-16  5.1711946E+02                                  7583         1 5.8E+01
+   9045              9.9E-01                  8.2E-04  2.2514281E+02           974    302  6.0E-02    8068         1 2.5E+01
 
    Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
-    181     0    181              1  4.3E-05  2.9E-03 -1.0873121E+01    6864           20 4.1E+07         _  r
-    219     1     38 6.6E-02      2  4.2E-05  3.6E-03 -1.0152810E+01    7546           15 8.4E+06 1.4E+02 _n rl
-    242     2     23 3.6E-02      3  4.1E-05  6.5E-03 -9.4371024E+00    6935    15     13 6.4E+05 3.1E+02 _s  l
-    249     3      7 6.0E-03      7  4.1E-05  5.0E-03 -9.4798481E+00    6485     7     17 1.8E+04 3.1E+02 _
-    259     4     10 6.5E-03     11  4.1E-05  3.0E-03 -1.0254911E+01    6175           20 2.9E+07 1.2E+02 _
-    284     5     25 5.9E-03     15  4.1E-05  5.0E-03 -1.0613464E+01    6425     8     16 6.0E+05 3.7E+01 _
-    305     6     21 7.6E-03     19  4.0E-05  5.1E-03 -1.0443033E+01    6730           18 1.3E+07 7.9E+01 _
-    317     7     12 7.7E-03     23  4.0E-05  2.9E-03 -1.0447715E+01    6164    12     19 1.5E+05 7.8E+01 _
-    324     8      7 2.2E-02     29  3.9E-05  3.3E-03 -1.0463141E+01    6244           21 3.2E+07 7.8E+01 _ M
-    334     9     10 2.1E-02     34  3.9E-05  3.9E-03 -1.0480406E+01    6001           22 3.5E+05 7.8E+01 _
-    342    10      8 7.2E-03     38  3.8E-05  2.4E-03 -1.0488309E+01    5995           25 3.4E+07 7.8E+01 _
-    361    11     19 1.9E-02     43  3.8E-05  2.9E-03 -1.0499657E+01    6349           21 5.8E+07 7.8E+01 _
-    371    12     10 5.9E-03     47  3.7E-05  2.4E-03 -1.0294235E+01    6414     8     14 1.0E+05 1.4E+02 _  R
-    383    13     12 1.2E-03     56  3.7E-05  3.1E-03 -7.5058871E+00    6406           21 8.1E+07 1.0E+03 _s
-    404    14     21 8.3E-03     60  3.7E-05  4.1E-03 -7.5428456E+00    6168    11     27 1.3E+06 1.0E+03 _
-    478    15     74 7.5E-03     64  3.7E-05  3.0E-03 -9.9090763E+00    6904           21 1.6E+08 2.7E+02 _
-    511    16     33 2.2E-02     69  3.6E-05  2.5E-02 -9.9324301E+00    6489           27 2.7E+08 2.7E+02 _
-    518    17      7 7.0E-03     73  3.6E-05  5.1E-03 -9.9418823E+00    5746           21 3.7E+02 2.7E+02 _
-    528    18     10 6.2E-03     77  3.6E-05  1.4E-02 -9.1841414E+00    6075           20 2.0E+07 5.2E+02 _
+   9127    10    882 8.9E-03     20  1.9E-03  5.8E-02  3.0044801E+01    7683            8 7.8E+07 1.7E+00 _
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+   9227      6.8E+04 1.1E-04     33  2.2E+03           4.4337977E+07    797    797   1053  6.6E-03    7555
+   9327              1.0E+00     26  9.2E+01  1.9E-10  1.8438715E+06                                  7632         1 3.3E+08
+   9427              1.0E+00     23  6.3E+01  1.5E-11  1.2736176E+06                                  7658         1 1.7E+06
+   9527     -1.0E+04 5.0E-04     18  4.6E+01  2.4E+01  9.2452336E+05   1032   1032   1049 -9.6E-01    7641         1 4.3E+00
+   9627     -8.8E+04 2.2E-04     13  2.9E+01  8.8E+04  5.8430259E+05   1022    402   1023  3.0E-02    7668         1 1.9E+09
+   9727      4.1E+04 1.0E+00     10  1.5E+01  1.1E-10  3.0889537E+05   1026                           7609         1 2.0E+07
+   9827              6.7E-02      7  8.5E+00           1.7104424E+05           716   1052 -1.5E-03    7624
+   9927     -5.1E+03 6.2E-03      9  5.8E+00  7.2E+00  1.1637846E+05   1034   1034   1055 -4.7E+00    7540         1 3.3E+01
+  10027      2.2E+03 1.5E-01      4  4.2E+00  2.0E+00  8.5793451E+04   1026   1026    612  1.6E+02    7499         1 1.5E+01
+  10127              1.0E+00      3  8.2E-01  4.6E-13  1.8864637E+04                                  7518         1 4.9E+02
+  10227      5.5E+01 5.0E-01                  5.7E-01  1.5358653E+03   1033   1033   1061  1.5E+00    7416         1 4.3E+03
+  10327              1.0E+00                  1.3E-14  2.8125526E+02                                  7914         4 6.5E+04
+  10427              1.0E+00                  3.6E-13  7.0530028E+01                                  7799         7 1.9E+07
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  10441    11   1314 5.9E-02     23  1.9E-03  4.1E-02  6.1027067E+01    7832     8      8 6.0E+06 4.8E+00 _
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+  10541              9.2E-01     24  2.4E+03           6.3202756E+07           311   1050  1.6E-02    7987
+  10641      2.6E+06 1.5E-01     21  4.4E+02  1.7E+04  2.1532299E+07   1053   1053   1038 -6.9E+00    7925         1 8.6E+02
+  10741              1.0E+00     19  5.5E+01  6.3E-08  7.4189844E+06                                  7744         4 5.9E+03
+  10841     -3.5E+04 7.3E-01     19  4.7E+01  6.1E+02  2.0474009E+06   1049   1049   1043 -1.4E+00    7049   1     9 1.1E+04
+  10941              1.0E+00     20  3.6E+01  1.7E-07  1.3711783E+06                                  7685   1    16 1.3E+04
+  11041              3.8E-01     14  1.8E+01  1.4E+02  7.5045491E+05          1053        -4.0E-02    6172        17 7.7E+02
+  11141     -6.4E+03 1.0E+00     14  1.2E+01  8.0E-08  3.8727973E+05   1042                           7207   1    25 1.7E+06
+  11241              1.0E+00     12  8.2E+00  8.4E-10  2.6577470E+05                                  7648   2    26 1.9E+06
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  11279    12    838 1.6E-02     26  1.8E-03  3.5E-01  6.6482490E+01    7648           37 5.7E+07 5.0E+00 _  R i
+  11366    13     87 1.1E-01     28  1.8E-03  4.1E-01  4.6000876E+04    6309    36     35 1.9E+07 4.5E+03 _s   i
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+  11466      1.3E+04 9.5E-01     10  9.2E+00  6.4E+02  2.2879431E+05   1033     75   1037 -1.3E-01    7001   3    20 2.5E+05
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  11536    14    170 4.3E-02     31  1.8E-03  1.1E-01  5.8459607E+04    7174           28 4.0E+07 2.0E+03 _    i
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+  11636              1.0E+00     19  7.6E+02  1.1E-04  1.6886829E+07                                  8082        11 1.9E+04
+  11736     -4.1E+04 1.0E+00     19  1.7E+01  8.1E-09  1.2613797E+06   1026                           7254        13 1.3E+05
+  11836      1.3E+02 1.7E-01     17  1.2E+01  1.1E+02  3.3228053E+05    430   1031   1032 -1.2E+00    7724        24 4.2E+06
+  11936      3.6E+03 1.0E+00     11  7.6E+00  6.3E-09  1.8224005E+05   1056                           7699        24 1.7E+06
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  11954    15    418 6.1E-02     33  1.7E-03  1.8E-01  7.0783500E+04    7708           28 4.1E+06 1.9E+03 _    i
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+  12054      3.5E+00 1.5E-01     10  8.5E+00  3.0E+00  2.0236853E+05    889   1051        -5.6E-01    7682        33 1.3E+07
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  12063    16    109 1.3E-02     36  1.7E-03  7.0E-02  7.7377646E+04    7682           35 1.3E+07 8.1E+03 _    i
+  12123    17     60 1.6E-02     39  1.7E-03  7.5E-02  1.9777616E+05    6167           32 7.6E+06 5.1E+04 _    i
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+  12223              1.0E+00     15  1.6E+01  3.0E-09  7.8754398E+05                                  7784   1    17 4.0E+06
+  12323              1.0E+00     12  1.1E+01  5.1E-10  2.5924497E+05                                  7870   1    22 2.0E+07
+  12423              1.0E+00     10  7.8E+00  4.1E-09  1.8262255E+05                                  7835   1    30 2.7E+08
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  12434    18    311 4.7E-02     42  1.7E-03  2.0E-01  2.3649691E+05    7835           31 2.0E+08 6.4E+04 _    i
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+  12534              5.9E-01     17  1.8E+01  2.8E+02  7.5843763E+05          1035        -3.4E-01    7992        19 7.1E+06
+  12634              1.0E+00     15  9.6E+00  1.0E-07  3.1043813E+05                                  8029        19 1.6E+06
+  12734              1.0E+00     13  8.7E+00  7.6E-10  2.1693413E+05                                  8043        26 6.0E+04
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  12768    19    334 4.9E-02     45  1.7E-03  2.5E-01  2.2603538E+05    8058           30 2.9E+06 6.4E+04 _    i
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+  12868              1.0E+00     17  2.4E+01  2.6E-09  1.7200355E+06                                  7955         8 1.6E+06
+  12968              1.0E+00     17  1.8E+01  1.3E-09  9.5012802E+05                                  8162        16 5.3E+05
+  13068      2.6E+04 2.6E-01     18  1.4E+01  1.9E+04  4.8680268E+05   1038     77   1030 -9.0E-02    7095   1    19 4.9E+04
+  13168              8.9E-01     12  1.1E+01  1.0E+01  2.7803202E+05          1054   1037 -6.8E-01    7463   2    25 7.2E+05
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  13237    20    469 2.2E-02     48  1.7E-03  1.9E-01  2.3966348E+05    7558           31 6.2E+07 7.1E+04 _    i
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+  13337              1.0E+00     15  1.7E+01  6.7E-06  5.2497856E+06                                  8292         9 7.5E+01
+  13437              2.3E-01     19  2.4E+01  7.1E+02  1.0695738E+06          1035         4.9E-01    8463        18 1.6E+07
+  13537      4.0E+01 1.0E+00     18  1.4E+01  1.4E-09  3.4043644E+05    300                           7151   1    26 1.1E+07
+  13637              1.0E+00     15  1.0E+01  9.3E-10  2.2855204E+05                                  7528   1    35 3.5E+07
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  13639    21    402 2.7E-02     51  1.7E-03  2.4E-01  2.6265062E+05    7528           36 4.7E+07 8.2E+04 _    i
+  13669    22     30 2.7E-02     54  1.6E-03  8.8E-02  2.6566294E+05    5681           33 1.1E+06 8.7E+04 _    i
+  13721    23     52 5.3E-02     57  1.6E-03  2.0E-01  2.5789178E+05    5551    17     42 1.1E+07 8.2E+04 _  R i
+  13758    24     37 9.3E-02     59  1.6E-03  2.2E-01  2.9771406E+05    4937           46 1.6E+06 1.3E+05 _s   i
+  13791    25     33 7.8E-02     62  1.5E-03  1.7E-01  3.1289363E+05    5371           46 3.9E+06 1.5E+05 _    i
+  13819    26     28 1.3E-01     65  1.5E-03  2.6E-01  3.0333872E+05    5546           47 1.3E+07 1.8E+05 _    i
+  13842    27     23 9.4E-02     68  1.5E-03  1.9E-01  3.0895564E+05    4627    27     43 2.4E+06 1.8E+05 _    i
+  13865    28     23 6.8E-02     71  1.5E-03  1.1E-01  3.1225473E+05    4458    16     51 1.8E+07 1.9E+05 _    i
+  13898    29     33 1.5E-01     74  1.6E-03  1.5E-01  3.2337074E+05    4706           43 7.5E+06 2.0E+05 _    i
+  13916    30     18 1.6E-01     76  1.6E-03  1.3E-01  3.2210630E+05    4461           46 2.2E+06 1.9E+05 _    i
+  13923    31      7 3.3E-01     78  1.7E-03  1.2E-01  3.1346448E+05    4049    14     44 2.1E+06 2.0E+05 _    i
+  13944    32     21 2.1E-01     80  1.7E-03  1.2E-01  3.0476379E+05    4543     9     45 2.3E+04 1.0E+05 _    i
+
+    Itn       QPmult  QPstep   nInf   SumInf   rgNorm  Elastic QPobj   +SBS   -SBS    -BS    Pivot     L+U ncp    nS  condHz
+  14044     -1.7E+03 1.0E+00     22  1.5E+01  9.9E-09  5.0426067E+05   1026                           6194   3    34 1.1E+05
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  14130    33    186 1.9E-01     82  1.7E-03  1.7E-01  2.8908957E+05    6230           45 2.8E+07 3.5E+04 _    i
+  14177    34     47 2.9E-01     84  1.6E-03  2.1E-01  2.8712521E+05    6143           48 2.1E+07 3.3E+04 _  R i
+  14196    35     19 3.4E-01     86  1.7E-03  1.2E-01  2.7636330E+05    6112           54 2.9E+07 3.3E+04 _s   i
+  14203    36      7 1.0E+00     87  1.6E-03  1.5E-01  2.6861274E+05    3487    37     50 2.2E+02 3.5E+04 _    i
+  14210    37      7 6.6E-01     89  1.6E-03  1.2E-01  2.5847993E+05    3648           50 8.5E+03 3.5E+04 _    i
+  14215    38      5 1.0E+00     90  1.5E-03  1.3E-01  2.4824478E+05    3561    12     50 4.5E+02 3.5E+04 _    i
+  14221    39      6 1.0E+00     91  1.4E-03  1.0E-01  2.4568702E+05    3890           47 1.1E+03 3.5E+04 _    i
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  14225    40      4 1.0E+00     92  1.3E-03  7.3E-02  2.4273802E+05    3721    11     48 4.6E+02 3.5E+04 _    i
+  14231    41      6 1.0E+00     93  1.3E-03  8.4E-02  2.4034790E+05    3799     5     47 7.2E+03 3.5E+04 _    i
+  14236    42      5 1.0E+00     94  1.2E-03  7.0E-02  2.3857298E+05    3886     9     45 6.4E+05 3.5E+04 _    i
+  14241    43      5 1.0E+00     95  1.2E-03  7.2E-02  2.3537042E+05    4049           45 7.1E+05 3.5E+04 _    i
+  14244    44      3 1.0E+00     96  1.2E-03  1.2E-01  2.3412461E+05    3881    13     45 7.3E+03 3.5E+04 _    i
+  14247    45      3 1.0E+00     97  1.2E-03  6.3E-02  2.2904791E+05    3879           45 1.4E+02 3.5E+04 _  R i
+  14250    46      3 1.0E+00     98  1.2E-03  3.7E-02  2.2696242E+05    3883           45 4.9E+03 3.5E+04 _s   i
+  14254    47      4 1.0E+00     99  1.3E-03  3.7E-02  2.2566354E+05    4041           44 8.2E+03 3.5E+04 _    i
+  14258    48      4 1.0E+00    100  1.3E-03  4.5E-02  2.2539931E+05    3969     9     45 1.8E+02 3.5E+04 _    i
+  14262    49      4 1.0E+00    101  1.4E-03  6.6E-02  2.2475361E+05    3971           46 6.9E+03 3.5E+04 _    i
+  14263    50      1 1.0E+00    102  1.3E-03  4.7E-02  2.2439734E+05    3724           46 4.7E+01 3.5E+04 _    i
+  14266    51      3 1.0E+00    103  1.3E-03  2.3E-02  2.2414062E+05    3807           46 1.7E+02 3.5E+04 _    i
+  14267    52      1 1.0E+00    104  1.3E-03  3.1E-02  2.2399513E+05    3807           46 1.6E+02 3.5E+04 _    i
+  14268    53      1 3.9E-01    106  1.3E-03  2.2E-02  2.2391935E+05    3807           46 1.7E+02 3.5E+04 _    i
+  14270    54      2 1.0E+00    107  1.3E-03  2.0E-02  2.2385837E+05    3807           45 4.6E+01 3.5E+04 _    i
+  14271    55      1 1.0E+00    108  1.3E-03  2.8E-02  2.2380025E+05    3807     6     45 4.5E+01 3.5E+04 _    i
+  14273    56      2 1.0E+00    109  1.3E-03  2.3E-02  2.2375531E+05    3807           46 1.6E+02 3.5E+04 _  R i
+  14274    57      1 1.0E+00    110  1.3E-03  2.2E-02  2.2372410E+05    3807           46 2.1E+02 3.5E+04 _s   i
+  14276    58      2 1.0E+00    111  1.3E-03  1.4E-02  2.2371681E+05    3807           45 4.9E+01 3.5E+04 _    i
+  14277    59      1 1.0E+00    112  1.3E-03  2.0E-02  2.2370022E+05    3807           45 3.2E+01 3.5E+04 _    i
+
+   Itns Major Minors    Step   nCon Feasible  Optimal  MeritFunction     L+U BSwap     nS  condHz Penalty
+  14278    60      1 1.0E+00    113  1.3E-03  1.8E-02  2.2363798E+05    3807           45 4.0E+01 3.5E+04 _    i
+  14279    61      1 5.0E-02    116  1.3E-03  3.0E-02  2.2363328E+05    3807           45 2.9E+01 3.5E+04 _    i
+  14280    62      1 4.6E-02    119  1.3E-03  1.4E-02  2.2362431E+05    3807           45 3.0E+01 3.5E+04 _    i
+  14281    63      1 1.0E+00    120  1.4E-03  1.5E-02  2.2362195E+05    3807           45 2.9E+01 3.5E+04 _    i
+  14282    64      1 1.0E+00    121  1.4E-03  1.3E-02  2.2354475E+05    3807           45 2.9E+01 3.5E+04 _    i
+  14283    65      1 5.0E-01    123  1.4E-03  2.3E-02  2.2350757E+05    3807           45 2.8E+01 3.5E+04 _    i
+  14284    66      1 1.0E+00    124  1.4E-03  2.1E-02  2.2350273E+05    3802     3     45 3.3E+01 3.5E+04 _    i
+  14285    67      1 1.0E+00    125  1.4E-03  1.6E-02  2.2344627E+05    3802           45 3.4E+01 3.5E+04 _  R i
+  14286    68      1 1.0E+00    126  1.4E-03  2.1E-02  2.2342295E+05    3802           45 3.4E+01 3.5E+04 _s   i
+  14287    69      1 1.0E+00    127  1.4E-03  1.7E-02  2.2340187E+05    3802           45 3.3E+01 3.5E+04 _    i
+  14288    70      1 1.0E+00    128  1.4E-03  1.4E-02  2.2338990E+05    3802           45 2.9E+01 3.5E+04 _    i
+  14289    71      1 1.0E+00    129  1.4E-03  1.8E-02  2.2338032E+05    3802           45 2.9E+01 3.5E+04 _    i
+  14290    72      1 1.0E+00    130  1.4E-03  1.7E-02  2.2336960E+05    3802           45 2.9E+01 3.5E+04 _    i
+  14291    73      1 1.0E+00    131  1.4E-03  1.3E-02  2.2335869E+05    3802           45 2.9E+01 3.5E+04 _    i
+  14293    74      2 1.0E+00    132  1.4E-03  2.0E-02  2.2333595E+05    3802           46 1.5E+02 3.5E+04 _    i
+  14295    75      2 1.0E+00    142  1.4E-03  2.8E-02  2.2287107E+05    3802           45 2.7E+01 3.5E+04 _    i
+  14299    76      4 6.9E-05    152  1.4E-03  3.6E-02  2.2287103E+05    3971     3     44 5.8E+02 3.5E+04 _    i
+  14302    77      3 1.4E-06    162  1.4E-03  6.1E-02  2.2287458E+05    4053           44 5.0E+02 3.5E+04 _    i
+  14308    78      6 2.8E-07    172  1.4E-03  2.6E-02  2.2287458E+05    4050    10     45 2.7E+02 3.5E+04 _  R i

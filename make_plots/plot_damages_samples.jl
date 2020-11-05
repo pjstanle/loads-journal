@@ -2,8 +2,8 @@ using PyPlot
 using FlowFarm
 using CCBlade
 using Statistics
-include("coeffs_data.jl")
-include("TIcoeffs_data.jl")
+include("coeffs_data_vct.jl")
+include("TIcoeffs_data_vct.jl")
 include("FAST_data_low.jl")
 include("model.jl")
 
@@ -53,7 +53,6 @@ L = 100
 sweep = range(-1.5,stop=1.5,length=L)
 
 sep_arr = [4.0,7.0,10.0]
-ws_arr = [12.0]
 
 TI = "low"
 ambient_ti = [0.046]
@@ -61,15 +60,15 @@ ambient_ti = [0.046]
 
 figure(1,figsize=(6.5,2.2))
 for k = 1:length(sep_arr)
-    for j = 1:length(ws_arr)
+
         sep = sep_arr[k]
         turbine_x = [0.0,sep*rotor_diameter[1]]
 
-        ws = ws_arr[j]
+        ws = 11.0
         windspeeds = [ws]
         windresource = ff.DiscretizedWindResource(winddirections, windspeeds, windprobabilities, measurementheight, air_density, ambient_ti, wind_shear_model)
 
-        alpha_star,beta_star,k1,k2 = get_coeffs(ws,"low")
+        alpha_star,beta_star,k1,k2 = get_coeffs(ws,TI)
         wakedeficitmodel = ff.GaussYawVariableSpread(alpha_star, beta_star, k1, k2, wec_factor)
         local_ti_model = ff.LocalTIModelMaxTI(alpha_star, beta_star, k1, k2)
         model_set = ff.WindFarmModelSet(wakedeficitmodel,wakedeflectionmodel,wakecombinationmodel,local_ti_model)
@@ -86,7 +85,7 @@ for k = 1:length(sep_arr)
             sorted_turbine_index, ct_model, rotor_points_y, rotor_points_z, windresource,
             model_set; wind_farm_state_id=1)
 
-            turbine_ct = zeros(nturbines) .+ 0.7620929940139257
+            # turbine_ct = zeros(nturbines) .+ 0.7620929940139257
 
             damage_model4[i] = ff.get_single_damage_FINAL(turbine_x,turbine_y,turbine_z,rotor_diameter,hub_height,turbine_yaw,turbine_ai,sorted_turbine_index,turbine_ID,state_ID,nCycles,az_arr,
                                 turb_samples,pitch_func,ff.GaussianTI,r,sections,Rhub,Rtip,precone,tilt,windresource,model_set,
@@ -114,18 +113,18 @@ for k = 1:length(sep_arr)
         end
 
 
-        if sep == 4.0 && ws == 12.0
+        if sep == 4.0 && ws == 11.0
                 subplot(131)
                 plot(sweep,damage_model4)
                 plot(sweep,damage_model100,"--")
-                ylabel(string("damage\n",L"$U_\infty=12$ m/s"))
+                ylabel(string("damage\n",L"$U_\infty=11$ m/s"))
                 xlabel("offset (D)")
                 title("4 D",fontsize=10)
                 tick_params(
                         axis="both",          # changes apply to the x-axis
                         which="both",      # both major and minor ticks are affected
                         labelbottom=false)
-        elseif sep == 7.0 && ws == 12.0
+        elseif sep == 7.0 && ws == 11.0
                 subplot(132)
                 plot(sweep,damage_model4)
                 plot(sweep,damage_model100,"--")
@@ -136,7 +135,7 @@ for k = 1:length(sep_arr)
                     which="both",      # both major and minor ticks are affected
                     labelbottom=false,
                     labelleft=false) # labels along the bottom edge are off
-        elseif sep == 10.0 && ws == 12.0
+        elseif sep == 10.0 && ws == 11.0
                 subplot(133)
                 plot(sweep,damage_model4,label="4 samples")
                 plot(sweep,damage_model100,"--",label="300 samples")
@@ -149,10 +148,10 @@ for k = 1:length(sep_arr)
                     labelleft=false) # labels along the bottom edge are off
                 legend(loc=1)
              end
-                ylim(0.0,0.4)
+                ylim(0.0,0.2)
 end
-end
+
 
 suptitle("low turbulence intensity: 4.6%",fontsize=10)
 subplots_adjust(top=0.82,bottom=0.1,left=0.13,right=0.99,wspace=0.1,hspace=0.1)
-savefig("damage_samples.pdf",transparent=true)
+savefig("damage_samples2.pdf",transparent=true)

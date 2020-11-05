@@ -15,8 +15,10 @@ function ti_wrapper(x)
 
     ds = x[1]
     dt = x[2]
+    # cct = x[1]
+    # cti = x[2]
 
-    ti_vec = zeros(typeof(ds),length(data_array))
+    ti_vec = zeros(typeof(x[1]),length(data_array))
     sep_arr = [4.0,7.0,10.0]
 
     index = 1
@@ -28,6 +30,7 @@ function ti_wrapper(x)
         for j = 1:161
             loc = [x,y_vec[j],z]
             ti_vec[index] = ff.GaussianTI(loc,turbine_x, turbine_y, rotor_diameter, hub_height, turbine_ct, sorted_turbine_index, ambient_ti[1]; div_sigma=ds, div_ti=dt)
+            # ti_vec[index] = ff.GaussianTI(loc,turbine_x, turbine_y, rotor_diameter, hub_height, turbine_ct, sorted_turbine_index, ambient_ti[1]; coeff_ct=cct, coeff_ti=cti)
             index += 1
         end
     end
@@ -75,13 +78,17 @@ data_array = [TI4[p1:p2];TI7[p1:p2];TI10[p1:p2]]
 include("model_optParams.jl")
 
 
-
+println("ambient_ti: ", ambient_ti)
 x = rand(2) .* 5.0
+# x = rand(1) .* 2.0
 
 println("start: ", ti_wrapper(x))
 
-lb = zeros(4) .+ 0.000
-ub = zeros(4) .+ 1000.0
+lb = zeros(2) .+ 0.000
+lb = [0.0,0.0]
+ub = zeros(2) .+ 1000.0
+# lb = zeros(1) .+ 0.000
+# ub = zeros(1) .+ 1000.0
 options = Dict{String, Any}()
 options["Derivative option"] = 1
 options["Verify level"] = 3
@@ -98,15 +105,20 @@ println("info: ", info)
 
 ds = xopt[1]
 dt = xopt[2]
-#
 println("ds = ",ds)
 println("dt = ",dt)
+# cct = xopt[1]
+# cti = xopt[2]
+# println("coeff_ct: ", cct)
+# println("coeff_ti: ", cti)
+#
+
 
 plot(data_array)
 
-sep = [4.0,7.0,10.0]
+sep_arr = [4.0,7.0,10.0]
 #
-ti_points = zeros(typeof(k1),length(sweep)*length(sep))
+ti_points = zeros(typeof(k1),length(sweep)*length(sep_arr))
 global index = 1
 for k = 1:3
     sep = sep_arr[k]
@@ -117,6 +129,7 @@ for k = 1:3
         global index
         loc = [x,y_vec[j],z]
         ti_points[index] = ff.GaussianTI(loc,turbine_x, turbine_y, rotor_diameter, hub_height, turbine_ct, sorted_turbine_index, ambient_ti[1]; div_sigma=ds, div_ti=dt)
+        # ti_points[index] = ff.GaussianTI(loc,turbine_x, turbine_y, rotor_diameter, hub_height, turbine_ct, sorted_turbine_index, ambient_ti[1]; coeff_ct=cct, coeff_ti=cti)
         index += 1
     end
 end

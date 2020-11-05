@@ -58,14 +58,25 @@ omegas = [6.972,7.183,7.506,7.942,8.469,9.156,10.296,11.431,11.89,12.1,
 # pitches = [0.,0.,0.,0.,0.,0.,0.,0.,0.,0.0,3.823,6.602,8.668,10.45,12.055,
 #                         13.536,14.92,16.226,17.473,18.699,19.941,21.177,22.347,
 #                         23.469]
-speeds = [3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,10.5,11.0,11.4,12.0,13.0,14.0,15.0,
-                    16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0]
+# speeds = [3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,10.5,11.0,11.4,12.0,13.0,14.0,15.0,
+#                     16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0]
+#
+# pitches = [0.,0.,0.,0.,0.,0.,0.,0.,0.1,0.5,1.0,3.823,6.602,8.668,10.45,12.055,
+#                         13.536,14.92,16.226,17.473,18.699,19.941,21.177,22.347,
+#                         23.469]
 
-pitches = [0.,0.,0.,0.,0.,0.,0.,0.,0.1,0.5,1.0,3.823,6.602,8.668,10.45,12.055,
-                        13.536,14.92,16.226,17.473,18.699,19.941,21.177,22.347,
-                        23.469]
 
 
+speeds = range(0.0,stop=25.0,length=50)
+pitches = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+    0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.01, 0.1, 1.0, 2.4665620123758987, 4.250994247344594,
+    5.558158359095206, 6.661448453292461, 7.644379771413811, 8.546108522076311,
+    9.387734419879408, 10.182697739395135, 10.939463292236832, 11.66372831629439,
+    12.361696788634076, 13.038653267820896, 13.697713414821868, 14.339164680070546,
+    14.963406615582839, 15.57178445366522, 16.166746693353407, 16.751095763259475,
+    17.326332536703173, 17.89285677377614, 18.450533941560188, 18.999731988022262,
+    19.540167083955026, 20.072178862122602, 20.596584281875597, 21.114152896544486,
+    21.625176584198414]
 
 rotor = CCBlade.Rotor(Rhub, Rtip, B, true, pitch, precone)
 sections = CCBlade.Section.(r,chord,theta,airfoils)
@@ -93,9 +104,9 @@ ai = 1.0/3.0
 turbine_ct = zeros(nturbines) .+ ct
 turbine_ai = zeros(nturbines) .+ ai
 winddirections = [270.0*pi/180.0]
-ambient_ti = ones(length(winddirections)) .* 0.046
-# ambient_ti = ones(length(winddirections)) .* 0.08
-# wind_speed = 10.0
+# ambient_ti = ones(length(winddirections)) .* 0.046
+ambient_ti = ones(length(winddirections)) .* 0.08
+wind_speed = 10.0
 windspeeds = [wind_speed]
 windprobabilities = [1.0]
 measurementheight = [hub_height[1]]
@@ -105,6 +116,8 @@ turbine_inflow_velcities = zeros(nturbines) .+ wind_speed
 # rotor sample points
 rotor_points_y = [-0.69,-0.69,0.69,0.69]
 rotor_points_z = [-0.69,0.69,-0.69,0.69]
+# rotor_points_y = [-1.0,-0.5,0.0,0.5,1.0,-1.0,-0.5,0.0,0.5,1.0,-1.0,-0.5,0.0,0.5,1.0,-1.0,-0.5,0.0,0.5,1.0,-1.0,-0.5,0.0,0.5,1.0]
+# rotor_points_z = [-1.0,-1.0,-1.0,-1.0,-1.0,-0.5,-0.5,-0.5,-0.5,-0.5,0.0,0.0,0.0,0.0,0.0,0.5,0.5,0.5,0.5,0.5,1.0,1.0,1.0,1.0,1.0]
 
 ctdata = readdlm("inputfiles/NREL5MWCPCT.txt",  ',', skipstart=1)
 velpoints = ctdata[:,1]
@@ -153,5 +166,9 @@ model_set = ff.WindFarmModelSet(wakedeficitmodel,wakedeflectionmodel,wakecombina
 # omega_func = Akima(speeds, omegas)
 pitch_func = Akima(speeds, pitches)
 
-turbine_ct = ones(nturbines) .* ff.calculate_ct(10.0,ct_model[1])
+# turbine_ct = ones(nturbines) .* ff.calculate_ct(10.0,ct_model[1])
 # println(turbine_ct)
+
+turbine_inflow_velcities = [windspeeds[1]]
+turbine_ct = ff.calculate_ct(turbine_inflow_velcities[1],ct_model[1])
+sorted_turbine_index = [1,2]
