@@ -22,7 +22,9 @@ aep = [11.290586094362506,11.283075261143072,11.261310924726308,11.2639978166118
 damage = [0.055298564835795205,0.050004327643598544,0.0474832062631714,0.045000365583267095,0.04250553416008041,0.040000000065175664,0.03750351976246852]#,0.03863022614295062]
 figure(figsize=(3,2.5))
 plot(damage./damage[1],aep./aep[1],"o")
-xlabel("normalized damage")
-ylabel("normalized AEP")
+xlabel("normalized damage",fontsize=8)
+ylabel("normalized AEP",fontsize=8)
+plt.xticks(fontsize=8)
+plt.yticks(fontsize=8)
 tight_layout()
-savefig("pareto2.pdf",transparent=true)
+savefig("pareto_second_revision.pdf",transparent=true)

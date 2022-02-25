@@ -29,6 +29,13 @@ function ti_wrapper(x)
         z = hub_height[1]
         for j = 1:161
             loc = [x,y_vec[j],z]
+            # print(loc)
+            # print(turbine_x)
+            # print(turbine_y)
+            # print(rotor_diameter)
+            # print(hub_height)
+            # print(turbine_ct)
+            # print(sorted_turbine_index)
             ti_vec[index] = ff.GaussianTI(loc,turbine_x, turbine_y, rotor_diameter, hub_height, turbine_ct, sorted_turbine_index, ambient_ti[1]; div_sigma=ds, div_ti=dt)
             # ti_vec[index] = ff.GaussianTI(loc,turbine_x, turbine_y, rotor_diameter, hub_height, turbine_ct, sorted_turbine_index, ambient_ti[1]; coeff_ct=cct, coeff_ti=cti)
             index += 1
@@ -62,8 +69,10 @@ global data_array
 
 
 wind_speed = 13.0
+# TI = "low"
+# ambient_ti = [0.046]
 TI = "high"
-ambient_ti = [0.08]
+ambient_ti = 0.08
 
 include("TI_data.jl")
 TI4,l = get_ti_data(wind_speed,TI,4.0)
@@ -77,22 +86,23 @@ sweep = range(-200.0,stop=200.0,length=length(TI4))[p1:p2]
 data_array = [TI4[p1:p2];TI7[p1:p2];TI10[p1:p2]]
 include("model_optParams.jl")
 
-
+println("turbine_ct: ", turbine_ct)
 println("ambient_ti: ", ambient_ti)
-x = rand(2) .* 5.0
+x = rand(2) .* 100.0
+# x[1] = 0.000001
 # x = rand(1) .* 2.0
 
 println("start: ", ti_wrapper(x))
 
-lb = zeros(2) .+ 0.000
-lb = [0.0,0.0]
+lb = zeros(2) .- 1000.0
+# lb = [0.0,0.0]
 ub = zeros(2) .+ 1000.0
 # lb = zeros(1) .+ 0.000
 # ub = zeros(1) .+ 1000.0
 options = Dict{String, Any}()
 options["Derivative option"] = 1
 options["Verify level"] = 3
-options["Major optimality tolerance"] = 1e-6
+options["Major optimality tolerance"] = 1e-12
 options["Major iteration limit"] = 1e6
 options["Summary file"] = "snopt-summary.out"
 options["Print file"] = "snopt-print.out"

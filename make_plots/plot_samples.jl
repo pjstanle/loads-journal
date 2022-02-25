@@ -53,4 +53,4 @@ xlabel("difference between consecutive\nsamples")
 
 tight_layout()
 
-savefig("turbulence_samples.pdf",transparent=true)
+# savefig("turbulence_samples.pdf",transparent=true)

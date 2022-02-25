@@ -30,7 +30,7 @@ plot(bx,by,"--",color="black",linewidth=0.5)
 for i = 1:length(turbine_x)
     plt.gcf().gca().add_artist(plt.Circle((turbine_x[i],turbine_y[i]), rotor_diameter[i]/2.0, fill=false,color="C0"))
 end
-title("no damage constraints",y=0.95,fontsize=10)
+title("no damage constraints",y=0.95,fontsize=8)
 
 ylim(-500,2500)
 # ylim(-R-100,R+100)
@@ -49,8 +49,8 @@ tick_params(
     labelleft=false,
     labelbottom=false) # labels along the bottom edge are off
 
-text(1500,-300,"AEP: 1129 GWh",horizontalalignment="center",fontsize=10)
-# text(0.0,-R-170,"AEP: 538.8 GWh",horizontalalignment="center",fontsize=10)
+text(1500,-300,"AEP: 1129 GWh",horizontalalignment="center",fontsize=8)
+# text(0.0,-R-170,"AEP: 538.8 GWh",horizontalalignment="center",fontsize=8)
 #
 # # turbine_x = readdlm("../with_loads/x_with_loads170.txt")[:,1]
 # # turbine_y = readdlm("../with_loads/y_with_loads170.txt")[:,1]
@@ -80,7 +80,7 @@ for i = 1:length(turbine_x)
         plt.gcf().gca().add_artist(plt.Circle((turbine_x[i],turbine_y[i]), rotor_diameter[i]/2.0, fill=false,color="C1"))
     end
 end
-title("with damage constraints",y=0.95,fontsize=10)
+title("with damage constraints",y=0.95,fontsize=8)
 #
 #
 ylim(-500,2500)
@@ -100,11 +100,11 @@ tick_params(
     labelleft=false,
     labelbottom=false) # labels along the bottom edge are off
 
-text(1500,-300,"AEP: 1069 GWh",horizontalalignment="center",fontsize=10)
+text(1500,-300,"AEP: 1069 GWh",horizontalalignment="center",fontsize=8)
 
 subplots_adjust(top=0.93,bottom=0.01,left=0.01,right=0.99,wspace=0.05)
 #
 #
 # tight_layout()
 #
-savefig("opt_layouts2.pdf",transparent=true)
+savefig("opt_layouts_second_revision.pdf",transparent=true)

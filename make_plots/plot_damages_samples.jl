@@ -154,4 +154,4 @@ end
 
 suptitle("low turbulence intensity: 4.6%",fontsize=10)
 subplots_adjust(top=0.82,bottom=0.1,left=0.13,right=0.99,wspace=0.1,hspace=0.1)
-savefig("damage_samples2.pdf",transparent=true)
+# savefig("damage_samples2.pdf",transparent=true)

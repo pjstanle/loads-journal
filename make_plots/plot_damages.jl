@@ -46,17 +46,17 @@ damage = ff.get_total_farm_damage_FINAL(turbine_x,turbine_y,turbine_z,rotor_diam
 println("time 2: ", time()-t)
 
 
-# figure(1,figsize=(6.5,3.5))
-# subplot(121)
-# plot(damage_no_loads,"o",color="C0",markersize=5)
-# ylim(0.0,0.55)
-# ylabel("damage")
-# xlabel("turbine number")
-# title("no damage constraints",fontsize=10)
+figure(1,figsize=(6.5,3.5))
+subplot(121)
+plot(damage_no_loads,"o",color="C0",markersize=5)
+ylim(0.0,0.55)
+ylabel("damage")
+xlabel("turbine number")
+title("no damage constraints",fontsize=10)
 
-# subplot(122)
+subplot(122)
 plot(damage,"o",color="C1",markersize=5)
-# ylim(0.0,0.55)
+ylim(0.0,0.55)
 xlabel("turbine number")
 title("with damage constraints",fontsize=10)
 

@@ -52,8 +52,8 @@ function vel_wrapper(x)
 
     diff_in = maximum(data_array) .- data_array
     diff_out = vel_points[1] .- vel_points
-    # return [sum((vel_points .- data_array) .^2)]./1.0
-    return [sum((diff_in .- diff_out) .^2)]
+    return [sum((vel_points .- data_array) .^2)]./1.0
+    # return [sum((diff_in .- diff_out) .^2)]
 end
 
 
@@ -90,11 +90,11 @@ global sweep
 global data_array
 
 
-wind_speed = 13.0
-# TI = "high"
-# ambient_ti = [0.08]
-TI = "low"
-ambient_ti = [0.046]
+wind_speed = 10.0
+TI = "high"
+ambient_ti = [0.08]
+# TI = "low"
+# ambient_ti = [0.046]
 
 
 include("vel_data.jl")
@@ -111,17 +111,24 @@ println(length(data_array))
 
 # wind_speed = 14.0
 include("model_optParams.jl")
+println("ambient_ti: ", ambient_ti)
 
 windresource = ff.DiscretizedWindResource(winddirections, windspeeds, windprobabilities, measurementheight, air_density, ambient_ti, wind_shear_model)
-x = [copy(alpha_star);copy(beta_star);copy(k1);copy(k2)]
+# x = [copy(alpha_star);copy(beta_star);copy(k1);copy(k2)]
 
 x = rand(4) .* [5.0,1.0,1.0,0.01]
+# println(x)
 # x = [5.0,0.5,0.3837,0.003678]
+# alpha_star = 3.735037680372833
+# beta_star = 0.18214749112109724
+# k1 = 0.019461638009450697
+# k2 = 0.011119924492244956
+# x = [alpha_star,beta_star,k1,k2]
 
 println("start: ", vel_wrapper(x))
 
 lb = zeros(4) .+ 0.000
-ub = zeros(4) .+ 10.0
+ub = zeros(4) .+ 100.0
 options = Dict{String, Any}()
 options["Derivative option"] = 1
 options["Verify level"] = 3

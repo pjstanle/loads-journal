@@ -91,10 +91,10 @@ ylim(0.0,1.03)
 xlabel("turbine number")
 title("with damage constraints",fontsize=10)
 
-println("maximum damage: ", maximum(damage))
-println("AEP: ", AEP)
+# println("maximum damage: ", maximum(damage))
+# println("AEP: ", AEP)
 
 
 subplots_adjust(top=0.9,left=0.12,right=0.98,bottom=0.18,wspace=0.2)
 
-savefig("opt_damage_vals2.pdf",transparent=true)
+# savefig("opt_damage_vals2.pdf",transparent=true)

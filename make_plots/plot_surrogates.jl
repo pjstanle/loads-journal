@@ -6,16 +6,20 @@ using CCBlade
 const ff = FlowFarm
 include("model.jl")
 
-speed_arr = range(0.0,stop=20.0,length=300)
+# speed_arr = range(0.0,stop=20.0,length=300)
+speed_arr = range(0.0,stop=25.0,length=40)
 # speed_arr = range(0.0,stop=15.0,length=300)
 
 pitch_arr = range(0,0.25,length=100)
 
 m_arr_flap = zeros(length(speed_arr))
 m_arr_edge = zeros(length(speed_arr))
+model_flap = zeros(length(speed_arr))
+model_edge = zeros(length(speed_arr))
 
 global azimuth_arr
 azimuth_arr = [pi/2.0,3.0*pi/2.0]
+# azimuth_arr = [3.0*pi/2.0]
 figure(figsize=(6.5,2.5))
 for j = 1:length(azimuth_arr)
     for k = 1:length(speed_arr)
@@ -49,9 +53,11 @@ for j = 1:length(azimuth_arr)
     azimuth = azimuth_arr[j]
 
     println(azimuth)
-    model_flap = zeros(length(speed_arr))
+
     if azimuth == pi/2
         subplot(141)
+        plt.xticks(fontsize=8)
+        plt.yticks(fontsize=8)
         for i = 1:length(speed_arr)
             if speed_arr[i] <= 10.62
                 model_flap[i] = 9110.0*(speed_arr[i]/10.62)^2
@@ -66,6 +72,8 @@ for j = 1:length(azimuth_arr)
 
     elseif azimuth == 3*pi/2
         subplot(143)
+        plt.xticks(fontsize=8)
+        plt.yticks(fontsize=8)
         for i = 1:length(speed_arr)
             if speed_arr[i] <= 10.62
                 model_flap[i] = 9110.0*(speed_arr[i]/10.62)^2
@@ -81,26 +89,29 @@ for j = 1:length(azimuth_arr)
     end
 
 
+
     plot(speed_arr,m_arr_flap,color="C0")
     plot(speed_arr,model_flap,"--",color="C1")
     ylim(0,13000)
     yticks([0,5000,10000])
-    title("flatwise",fontsize=10)
-    xlabel("wind speed (m/s)")
+    title("flatwise",fontsize=8)
+    xlabel("wind speed (m/s)",fontsize=8)
     if azimuth == pi/2
         gca().set_yticklabels(["0","5","10"])
-        ylabel("root bending\nmoment (MN*m)")
-        text(22,15000,"azimuth: 90 degrees",horizontalalignment="center")
+        ylabel("root bending\nmoment (MN*m)",fontsize=8)
+        text(22,15000,"azimuth: 90 degrees",horizontalalignment="center",fontsize=8)
     else
         gca().set_yticklabels(["",""])
-        text(22,15000,"azimuth: 270 degrees",horizontalalignment="center")
+        text(22,15000,"azimuth: 270 degrees",horizontalalignment="center",fontsize=8)
     end
 
 
 
-    model_edge = zeros(length(speed_arr))
+
     if azimuth == pi/2
         subplot(142)
+        plt.xticks(fontsize=8)
+        plt.yticks(fontsize=8)
         for i = 1:length(speed_arr)
             if speed_arr[i] <= 10.62
                 model_edge[i] = 1540.0*(speed_arr[i]/10.62)^2
@@ -119,14 +130,16 @@ for j = 1:length(azimuth_arr)
         end
         plot(speed_arr,m_arr_edge,color="C0")
         plot(speed_arr,model_edge,"--",color="C1")
-        title("edgewise",fontsize=10)
-        xlabel("wind speed (m/s)")
+        title("edgewise",fontsize=8)
+        xlabel("wind speed (m/s)",fontsize=8)
         ylim(0,13000)
         yticks([0,5000,10000])
         gca().set_yticklabels(["",""])
 
     elseif azimuth == 3*pi/2
         subplot(144)
+        plt.xticks(fontsize=8)
+        plt.yticks(fontsize=8)
         for i = 1:length(speed_arr)
             if speed_arr[i] <= 10.62
                 model_edge[i] = 1540.0*(speed_arr[i]/10.62)^2
@@ -144,19 +157,16 @@ for j = 1:length(azimuth_arr)
         end
         plot(speed_arr,m_arr_edge,color="C0",label="CCBlade")
         plot(speed_arr,model_edge,"--",color="C1",label="surrogate")
-        title("edgewise",fontsize=10)
-        xlabel("wind speed (m/s)")
+        title("edgewise",fontsize=8)
+        xlabel("wind speed (m/s)",fontsize=8)
         ylim(0,13000)
         yticks([0,5000,10000])
         gca().set_yticklabels(["",""])
         legend(fontsize=8)
     end
 
-    suptitle("with pitch",fontsize=10)
-    subplots_adjust(top=0.78,bottom=0.18,left=0.13,right=0.99,wspace=0.1)
-
-
 
 end
-
-# savefig("surrogate_pitch.pdf",transparent=true)
+suptitle("with pitch",fontsize=8)
+subplots_adjust(top=0.78,bottom=0.18,left=0.13,right=0.99,wspace=0.1)
+savefig("surrogate_second_revision.pdf",transparent=true)

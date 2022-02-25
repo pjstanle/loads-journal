@@ -35,7 +35,7 @@ windprobabilities = [1.0]
 windspeeds = [wind_speed]
 
 nbins = length(winddirections)
-ambient_ti = ones(nbins) .* 0.08
+ambient_ti = ones(nbins) .* ambient_ti
 measurementheight = ones(nbins) .* hub_height[1]
 shearexponent = 0.15
 air_density = 1.225  # kg/m^3

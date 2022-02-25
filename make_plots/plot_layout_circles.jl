@@ -53,4 +53,4 @@ tick_params(
     labelleft=false,
     labelbottom=false) # labels along the bottom edge are off
 
-savefig("opt_layouts_circles2.pdf",transparent=true)
+# savefig("opt_layouts_circles2.pdf",transparent=true)
